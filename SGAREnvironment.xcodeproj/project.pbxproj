@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A476AFB11619D960066F747 /* CLLocationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A476AF911619D960066F747 /* CLLocationAdditions.h */; };
+		4A476AFC11619D960066F747 /* CLLocationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A476AFA11619D960066F747 /* CLLocationAdditions.m */; };
+		4A574C061152C88600794035 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A574C051152C88600794035 /* MapKit.framework */; };
+		4A64A49A1120964700D4E22D /* SGARNavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4581120964700D4E22D /* SGARNavigationViewController.h */; };
+		4A64A49B1120964700D4E22D /* SGARNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4591120964700D4E22D /* SGARNavigationViewController.m */; };
+		4A64A4A31120964700D4E22D /* SG3DOverlayEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4631120964700D4E22D /* SG3DOverlayEnvironment.h */; };
+		4A64A4A41120964700D4E22D /* SG3DOverlayEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4641120964700D4E22D /* SG3DOverlayEnvironment.m */; };
+		4A64A4A51120964700D4E22D /* SGControlEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4651120964700D4E22D /* SGControlEvents.h */; };
+		4A64A4A61120964700D4E22D /* SGEnvironmentConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4661120964700D4E22D /* SGEnvironmentConstants.h */; };
+		4A64A4A71120964700D4E22D /* SGEnvironmentConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4671120964700D4E22D /* SGEnvironmentConstants.m */; };
+		4A64A4AF1120964700D4E22D /* SGMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4701120964700D4E22D /* SGMath.c */; };
+		4A64A4B01120964700D4E22D /* SGMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4711120964700D4E22D /* SGMath.h */; };
+		4A64A4B11120964700D4E22D /* SGMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4721120964700D4E22D /* SGMetrics.h */; };
+		4A64A4B21120964700D4E22D /* SGTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4731120964700D4E22D /* SGTexture.h */; };
+		4A64A4B31120964700D4E22D /* SGTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4741120964700D4E22D /* SGTexture.m */; };
+		4A64A4B41120964700D4E22D /* SG3DOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4761120964700D4E22D /* SG3DOverlayView.h */; };
+		4A64A4B51120964700D4E22D /* SG3DOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4771120964700D4E22D /* SG3DOverlayView.m */; };
+		4A64A4B61120964700D4E22D /* SGAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4781120964700D4E22D /* SGAnnotationView.h */; };
+		4A64A4B71120964700D4E22D /* SGAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4791120964700D4E22D /* SGAnnotationView.m */; };
+		4A64A4B81120964700D4E22D /* SGAnnotationViewContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A47A1120964700D4E22D /* SGAnnotationViewContainer.h */; };
+		4A64A4B91120964700D4E22D /* SGAnnotationViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A47B1120964700D4E22D /* SGAnnotationViewContainer.m */; };
+		4A64A4BA1120964700D4E22D /* SGARResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A47C1120964700D4E22D /* SGARResponder.h */; };
+		4A64A4BB1120964700D4E22D /* SGARView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A47D1120964700D4E22D /* SGARView.h */; };
+		4A64A4BC1120964700D4E22D /* SGARView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A47E1120964700D4E22D /* SGARView.m */; };
+		4A64A4BD1120964700D4E22D /* SGHeadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A47F1120964700D4E22D /* SGHeadingView.h */; };
+		4A64A4BE1120964700D4E22D /* SGHeadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4801120964700D4E22D /* SGHeadingView.m */; };
+		4A64A4BF1120964700D4E22D /* SGMovableStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4811120964700D4E22D /* SGMovableStack.h */; };
+		4A64A4C01120964700D4E22D /* SGMovableStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4821120964700D4E22D /* SGMovableStack.m */; };
+		4A64A4C11120964700D4E22D /* SGRadar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4831120964700D4E22D /* SGRadar.h */; };
+		4A64A4C21120964700D4E22D /* SGRadar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4841120964700D4E22D /* SGRadar.m */; };
+		4A64A4C31120964700D4E22D /* SGAREnvironment_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4971120964700D4E22D /* SGAREnvironment_Prefix.pch */; };
+		4A722F5F1198BFF80078ABCE /* GLU+iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A722F5D1198BFF80078ABCE /* GLU+iPhone.h */; };
+		4A722F601198BFF80078ABCE /* GLU+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A722F5E1198BFF80078ABCE /* GLU+iPhone.m */; };
+		4A722FAB1198C3B50078ABCE /* AccelerometerFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A722FA91198C3B50078ABCE /* AccelerometerFilter.h */; };
+		4A722FAC1198C3B50078ABCE /* AccelerometerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A722FAA1198C3B50078ABCE /* AccelerometerFilter.m */; };
+		4AEDB7AE1121E5F7003C1949 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7AD1121E5F7003C1949 /* CoreGraphics.framework */; };
+		4AEDB7B01121E5F7003C1949 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7AF1121E5F7003C1949 /* CoreLocation.framework */; };
+		4AEDB7B21121E5F7003C1949 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7B11121E5F7003C1949 /* OpenGLES.framework */; };
+		4AEDB7B41121E5F7003C1949 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7B31121E5F7003C1949 /* QuartzCore.framework */; };
+		4AEDB7B61121E5F7003C1949 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7B51121E5F7003C1949 /* UIKit.framework */; };
+		4AEDBA841121F32D003C1949 /* SGAREnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEDBA831121F32D003C1949 /* SGAREnvironment.h */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4A476AF911619D960066F747 /* CLLocationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationAdditions.h; sourceTree = "<group>"; };
+		4A476AFA11619D960066F747 /* CLLocationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLocationAdditions.m; sourceTree = "<group>"; };
+		4A574C051152C88600794035 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4A64A4581120964700D4E22D /* SGARNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARNavigationViewController.h; sourceTree = "<group>"; };
+		4A64A4591120964700D4E22D /* SGARNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGARNavigationViewController.m; sourceTree = "<group>"; };
+		4A64A4631120964700D4E22D /* SG3DOverlayEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SG3DOverlayEnvironment.h; sourceTree = "<group>"; };
+		4A64A4641120964700D4E22D /* SG3DOverlayEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SG3DOverlayEnvironment.m; sourceTree = "<group>"; };
+		4A64A4651120964700D4E22D /* SGControlEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGControlEvents.h; sourceTree = "<group>"; };
+		4A64A4661120964700D4E22D /* SGEnvironmentConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEnvironmentConstants.h; sourceTree = "<group>"; };
+		4A64A4671120964700D4E22D /* SGEnvironmentConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGEnvironmentConstants.m; sourceTree = "<group>"; };
+		4A64A4701120964700D4E22D /* SGMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SGMath.c; sourceTree = "<group>"; };
+		4A64A4711120964700D4E22D /* SGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMath.h; sourceTree = "<group>"; };
+		4A64A4721120964700D4E22D /* SGMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMetrics.h; sourceTree = "<group>"; };
+		4A64A4731120964700D4E22D /* SGTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTexture.h; sourceTree = "<group>"; };
+		4A64A4741120964700D4E22D /* SGTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTexture.m; sourceTree = "<group>"; };
+		4A64A4761120964700D4E22D /* SG3DOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SG3DOverlayView.h; sourceTree = "<group>"; };
+		4A64A4771120964700D4E22D /* SG3DOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SG3DOverlayView.m; sourceTree = "<group>"; };
+		4A64A4781120964700D4E22D /* SGAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAnnotationView.h; sourceTree = "<group>"; };
+		4A64A4791120964700D4E22D /* SGAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAnnotationView.m; sourceTree = "<group>"; };
+		4A64A47A1120964700D4E22D /* SGAnnotationViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAnnotationViewContainer.h; sourceTree = "<group>"; };
+		4A64A47B1120964700D4E22D /* SGAnnotationViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAnnotationViewContainer.m; sourceTree = "<group>"; };
+		4A64A47C1120964700D4E22D /* SGARResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARResponder.h; sourceTree = "<group>"; };
+		4A64A47D1120964700D4E22D /* SGARView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARView.h; sourceTree = "<group>"; };
+		4A64A47E1120964700D4E22D /* SGARView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGARView.m; sourceTree = "<group>"; };
+		4A64A47F1120964700D4E22D /* SGHeadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHeadingView.h; sourceTree = "<group>"; };
+		4A64A4801120964700D4E22D /* SGHeadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHeadingView.m; sourceTree = "<group>"; };
+		4A64A4811120964700D4E22D /* SGMovableStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMovableStack.h; sourceTree = "<group>"; };
+		4A64A4821120964700D4E22D /* SGMovableStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMovableStack.m; sourceTree = "<group>"; };
+		4A64A4831120964700D4E22D /* SGRadar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGRadar.h; sourceTree = "<group>"; };
+		4A64A4841120964700D4E22D /* SGRadar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGRadar.m; sourceTree = "<group>"; };
+		4A64A4851120964700D4E22D /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		4A64A4881120964700D4E22D /* LeftButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftButton.png; sourceTree = "<group>"; };
+		4A64A4891120964700D4E22D /* RightButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RightButton.png; sourceTree = "<group>"; };
+		4A64A48A1120964700D4E22D /* SGBluePin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGBluePin.png; sourceTree = "<group>"; };
+		4A64A48B1120964700D4E22D /* SGBottomInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGBottomInspectorBackground.png; sourceTree = "<group>"; };
+		4A64A48C1120964700D4E22D /* SGCloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGCloseButton.png; sourceTree = "<group>"; };
+		4A64A48D1120964700D4E22D /* SGDefaultContainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultContainer.png; sourceTree = "<group>"; };
+		4A64A48E1120964700D4E22D /* SGDefaultProfilePicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultProfilePicture.png; sourceTree = "<group>"; };
+		4A64A48F1120964700D4E22D /* SGDefaultRadarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultRadarBackground.png; sourceTree = "<group>"; };
+		4A64A4901120964700D4E22D /* SGDefaultRadarCurrentLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultRadarCurrentLocation.png; sourceTree = "<group>"; };
+		4A64A4911120964700D4E22D /* SGDefaultRadarTargetImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultRadarTargetImage.png; sourceTree = "<group>"; };
+		4A64A4921120964700D4E22D /* SGDefaultSelectedContainer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGDefaultSelectedContainer.png; sourceTree = "<group>"; };
+		4A64A4931120964700D4E22D /* SGGlassTargetBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGGlassTargetBackground.png; sourceTree = "<group>"; };
+		4A64A4941120964700D4E22D /* SGMiddleInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGMiddleInspectorBackground.png; sourceTree = "<group>"; };
+		4A64A4951120964700D4E22D /* SGRedPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGRedPin.png; sourceTree = "<group>"; };
+		4A64A4961120964700D4E22D /* SGTopInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGTopInspectorBackground.png; sourceTree = "<group>"; };
+		4A64A4971120964700D4E22D /* SGAREnvironment_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAREnvironment_Prefix.pch; sourceTree = "<group>"; };
+		4A722F5D1198BFF80078ABCE /* GLU+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLU+iPhone.h"; sourceTree = "<group>"; };
+		4A722F5E1198BFF80078ABCE /* GLU+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GLU+iPhone.m"; sourceTree = "<group>"; };
+		4A722FA81198C3960078ABCE /* build_ar_environment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_ar_environment; sourceTree = "<group>"; };
+		4A722FA91198C3B50078ABCE /* AccelerometerFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerFilter.h; sourceTree = "<group>"; };
+		4A722FAA1198C3B50078ABCE /* AccelerometerFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerFilter.m; sourceTree = "<group>"; };
+		4AEDB7AD1121E5F7003C1949 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4AEDB7AF1121E5F7003C1949 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4AEDB7B11121E5F7003C1949 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4AEDB7B31121E5F7003C1949 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4AEDB7B51121E5F7003C1949 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4AEDBA831121F32D003C1949 /* SGAREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAREnvironment.h; sourceTree = "<group>"; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libSGAREnvironment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGAREnvironment.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				4AEDB7AE1121E5F7003C1949 /* CoreGraphics.framework in Frameworks */,
+				4AEDB7B01121E5F7003C1949 /* CoreLocation.framework in Frameworks */,
+				4AEDB7B21121E5F7003C1949 /* OpenGLES.framework in Frameworks */,
+				4AEDB7B41121E5F7003C1949 /* QuartzCore.framework in Frameworks */,
+				4AEDB7B61121E5F7003C1949 /* UIKit.framework in Frameworks */,
+				4A574C061152C88600794035 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libSGAREnvironment.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* SGARView */ = {
+			isa = PBXGroup;
+			children = (
+				4A722FA81198C3960078ABCE /* build_ar_environment */,
+				4A64A4531120964700D4E22D /* Classes */,
+				4A64A4851120964700D4E22D /* README */,
+				4A64A4861120964700D4E22D /* Resources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = SGARView;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AEDB7B51121E5F7003C1949 /* UIKit.framework */,
+				4AEDB7B31121E5F7003C1949 /* QuartzCore.framework */,
+				4AEDB7B11121E5F7003C1949 /* OpenGLES.framework */,
+				4AEDB7AF1121E5F7003C1949 /* CoreLocation.framework */,
+				4AEDB7AD1121E5F7003C1949 /* CoreGraphics.framework */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				4A574C051152C88600794035 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A64A4531120964700D4E22D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4A64A4541120964700D4E22D /* Additions */,
+				4A64A4571120964700D4E22D /* Controllers */,
+				4A64A4621120964700D4E22D /* Environment */,
+				4A64A4681120964700D4E22D /* Utilities */,
+				4A64A4751120964700D4E22D /* Views */,
+				4AEDBA831121F32D003C1949 /* SGAREnvironment.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4A64A4541120964700D4E22D /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				4A476AF911619D960066F747 /* CLLocationAdditions.h */,
+				4A476AFA11619D960066F747 /* CLLocationAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		4A64A4571120964700D4E22D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A64A4581120964700D4E22D /* SGARNavigationViewController.h */,
+				4A64A4591120964700D4E22D /* SGARNavigationViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4A64A4621120964700D4E22D /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				4A64A4631120964700D4E22D /* SG3DOverlayEnvironment.h */,
+				4A64A4641120964700D4E22D /* SG3DOverlayEnvironment.m */,
+				4A64A4651120964700D4E22D /* SGControlEvents.h */,
+				4A64A4661120964700D4E22D /* SGEnvironmentConstants.h */,
+				4A64A4671120964700D4E22D /* SGEnvironmentConstants.m */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		4A64A4681120964700D4E22D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4A64A4701120964700D4E22D /* SGMath.c */,
+				4A64A4711120964700D4E22D /* SGMath.h */,
+				4A64A4721120964700D4E22D /* SGMetrics.h */,
+				4A64A4731120964700D4E22D /* SGTexture.h */,
+				4A64A4741120964700D4E22D /* SGTexture.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4A64A4751120964700D4E22D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A64A4761120964700D4E22D /* SG3DOverlayView.h */,
+				4A64A4771120964700D4E22D /* SG3DOverlayView.m */,
+				4A64A4781120964700D4E22D /* SGAnnotationView.h */,
+				4A64A4791120964700D4E22D /* SGAnnotationView.m */,
+				4A64A47A1120964700D4E22D /* SGAnnotationViewContainer.h */,
+				4A64A47B1120964700D4E22D /* SGAnnotationViewContainer.m */,
+				4A64A47C1120964700D4E22D /* SGARResponder.h */,
+				4A64A47D1120964700D4E22D /* SGARView.h */,
+				4A64A47E1120964700D4E22D /* SGARView.m */,
+				4A64A47F1120964700D4E22D /* SGHeadingView.h */,
+				4A64A4801120964700D4E22D /* SGHeadingView.m */,
+				4A64A4811120964700D4E22D /* SGMovableStack.h */,
+				4A64A4821120964700D4E22D /* SGMovableStack.m */,
+				4A64A4831120964700D4E22D /* SGRadar.h */,
+				4A64A4841120964700D4E22D /* SGRadar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A64A4861120964700D4E22D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4A722F5C1198BFD10078ABCE /* 3rd-Party */,
+				4A64A4871120964700D4E22D /* Images */,
+				4A64A4971120964700D4E22D /* SGAREnvironment_Prefix.pch */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4A64A4871120964700D4E22D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4A64A4881120964700D4E22D /* LeftButton.png */,
+				4A64A4891120964700D4E22D /* RightButton.png */,
+				4A64A48A1120964700D4E22D /* SGBluePin.png */,
+				4A64A48B1120964700D4E22D /* SGBottomInspectorBackground.png */,
+				4A64A48C1120964700D4E22D /* SGCloseButton.png */,
+				4A64A48D1120964700D4E22D /* SGDefaultContainer.png */,
+				4A64A48E1120964700D4E22D /* SGDefaultProfilePicture.png */,
+				4A64A48F1120964700D4E22D /* SGDefaultRadarBackground.png */,
+				4A64A4901120964700D4E22D /* SGDefaultRadarCurrentLocation.png */,
+				4A64A4911120964700D4E22D /* SGDefaultRadarTargetImage.png */,
+				4A64A4921120964700D4E22D /* SGDefaultSelectedContainer.png */,
+				4A64A4931120964700D4E22D /* SGGlassTargetBackground.png */,
+				4A64A4941120964700D4E22D /* SGMiddleInspectorBackground.png */,
+				4A64A4951120964700D4E22D /* SGRedPin.png */,
+				4A64A4961120964700D4E22D /* SGTopInspectorBackground.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4A722F5C1198BFD10078ABCE /* 3rd-Party */ = {
+			isa = PBXGroup;
+			children = (
+				4A722FA91198C3B50078ABCE /* AccelerometerFilter.h */,
+				4A722FAA1198C3B50078ABCE /* AccelerometerFilter.m */,
+				4A722F5D1198BFF80078ABCE /* GLU+iPhone.h */,
+				4A722F5E1198BFF80078ABCE /* GLU+iPhone.m */,
+			);
+			path = "3rd-Party";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A64A49A1120964700D4E22D /* SGARNavigationViewController.h in Headers */,
+				4A64A4A31120964700D4E22D /* SG3DOverlayEnvironment.h in Headers */,
+				4A64A4A51120964700D4E22D /* SGControlEvents.h in Headers */,
+				4A64A4A61120964700D4E22D /* SGEnvironmentConstants.h in Headers */,
+				4A64A4B01120964700D4E22D /* SGMath.h in Headers */,
+				4A64A4B11120964700D4E22D /* SGMetrics.h in Headers */,
+				4A64A4B21120964700D4E22D /* SGTexture.h in Headers */,
+				4A64A4B41120964700D4E22D /* SG3DOverlayView.h in Headers */,
+				4A64A4B61120964700D4E22D /* SGAnnotationView.h in Headers */,
+				4A64A4B81120964700D4E22D /* SGAnnotationViewContainer.h in Headers */,
+				4A64A4BA1120964700D4E22D /* SGARResponder.h in Headers */,
+				4A64A4BB1120964700D4E22D /* SGARView.h in Headers */,
+				4A64A4BD1120964700D4E22D /* SGHeadingView.h in Headers */,
+				4A64A4BF1120964700D4E22D /* SGMovableStack.h in Headers */,
+				4A64A4C11120964700D4E22D /* SGRadar.h in Headers */,
+				4A64A4C31120964700D4E22D /* SGAREnvironment_Prefix.pch in Headers */,
+				4AEDBA841121F32D003C1949 /* SGAREnvironment.h in Headers */,
+				4A476AFB11619D960066F747 /* CLLocationAdditions.h in Headers */,
+				4A722F5F1198BFF80078ABCE /* GLU+iPhone.h in Headers */,
+				4A722FAB1198C3B50078ABCE /* AccelerometerFilter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* SGAREnvironment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SGAREnvironment" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SGAREnvironment;
+			productName = SGARView;
+			productReference = D2AAC07E0554694100DB518D /* libSGAREnvironment.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "SGAREnvironment" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* SGARView */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* SGAREnvironment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A64A49B1120964700D4E22D /* SGARNavigationViewController.m in Sources */,
+				4A64A4A41120964700D4E22D /* SG3DOverlayEnvironment.m in Sources */,
+				4A64A4A71120964700D4E22D /* SGEnvironmentConstants.m in Sources */,
+				4A64A4AF1120964700D4E22D /* SGMath.c in Sources */,
+				4A64A4B31120964700D4E22D /* SGTexture.m in Sources */,
+				4A64A4B51120964700D4E22D /* SG3DOverlayView.m in Sources */,
+				4A64A4B71120964700D4E22D /* SGAnnotationView.m in Sources */,
+				4A64A4B91120964700D4E22D /* SGAnnotationViewContainer.m in Sources */,
+				4A64A4BC1120964700D4E22D /* SGARView.m in Sources */,
+				4A64A4BE1120964700D4E22D /* SGHeadingView.m in Sources */,
+				4A64A4C01120964700D4E22D /* SGMovableStack.m in Sources */,
+				4A64A4C21120964700D4E22D /* SGRadar.m in Sources */,
+				4A476AFC11619D960066F747 /* CLLocationAdditions.m in Sources */,
+				4A722F601198BFF80078ABCE /* GLU+iPhone.m in Sources */,
+				4A722FAC1198C3B50078ABCE /* AccelerometerFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/SGARView.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Resources/SGAREnvironment_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "SG_DEBUG=1";
+				HEADER_SEARCH_PATHS = SGClient/Headers;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SGClient/SGClient-v0.1.8/iphoneos\"",
+					"\"$(SRCROOT)/SGClient/SGClient-v0.1.8/iphonesimulator\"",
+					"\"$(SRCROOT)/SGClient/SGClient-v0.3.0/iphoneos\"",
+					"\"$(SRCROOT)/SGClient/SGClient-v0.3.0/iphonesimulator\"",
+					"\"$(SRCROOT)/SGClient/iphoneos\"",
+					"\"$(SRCROOT)/SGClient/iphonesimulator\"",
+				);
+				OTHER_LDFLAGS = (
+					"\"$(SRCROOT)/SGClient/$(PLATFORM_NAME)\"",
+					"-ObjC",
+				);
+				PRODUCT_NAME = SGAREnvironment;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/SGARView.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Resources/SGAREnvironment_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "SG_DEBUG=1";
+				HEADER_SEARCH_PATHS = "Classes/**";
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = SGAREnvironment;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SGAREnvironment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "SGAREnvironment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

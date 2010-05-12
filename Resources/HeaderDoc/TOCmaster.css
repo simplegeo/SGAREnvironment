@@ -1,0 +1,31 @@
+/* BODY */
+
+html {
+	background:url('../Images/bg.png') repeat-x top left;
+}
+
+
+body {
+	margin:0 auto;
+	font-family:Arial;
+	font-size: 85%;
+}
+
+#header {
+	width:760px;
+	margin:0 auto;
+	padding:25px 0 0 0;
+	position:relative;
+}
+
+#header > h1 > a.logoReplace {
+	width:256px;
+	height:49px;
+	background:url('../Images/logo.png') no-repeat top left;
+	text-indent:-9999px;
+	display:block;
+}
+
+#content {
+    background:#ffffff;
+}
