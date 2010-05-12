@@ -155,18 +155,6 @@ typedef NSInteger SGCardinalDirection;
 
 /*!
 * @property
-* @abstract The offset from the origin to use when placing the annotation views
-* within the radar.
-* @discussion This value is set when either the 
-* @link @link //simplegeo/ooc/cl/SG3DOverlayEnvironment SG3DOverlayEnvrionment @/link
-* generates a pinch, pull or double tap control event. See @link //simplegeo/ooc/intf/SG3DOverlayViewDelegate SG3DOverlayViewDelegate @/link.
-* Also, @link //simplegeo/ooc/instp/SGARView/enableWalking enableWalking @/link must be set to YES in order
-* for the walking offset to be applied to the environment when the proper control signals are generated. 
-*/
-@property (nonatomic, assign) CGPoint walkingOffset;
-
-/*!
-* @property
 * @abstract The @link //simplegeo/ooc/cl/SGAnnotationView SGAnnotationViews @/link that
 * this radar is in charge of displaying.
 */

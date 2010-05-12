@@ -42,7 +42,6 @@
 
 @interface SG3DOverlayView : UIView
 {
-    
     @private
 	GLint backingWidth;
 	GLint backingHeight;

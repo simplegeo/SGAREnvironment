@@ -49,7 +49,7 @@
 
 @implementation SGRadar
 
-@synthesize walkingOffset, rotatable, shouldShowCardinalDirections, annotationViews, cardinalDirectionOffset;
+@synthesize rotatable, shouldShowCardinalDirections, annotationViews, cardinalDirectionOffset;
 @synthesize currentLocationImageView, radarBackgroundImageView, headingImageView, radarBorderColor, radarCircleColor;
 @dynamic headingColor;
 
@@ -65,8 +65,6 @@
         heading = 0.0;
         
         cardinalDirectionOffset = 5.0;
-        
-        walkingOffset = CGPointZero;
         
         radarBorderColor = [[UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.7] retain];
         radarCircleColor = [[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7] retain];
@@ -211,7 +209,6 @@
 
 #pragma mark -
 #pragma mark UIView overrides
- 
 
 - (void) layoutSubviews
 {    
@@ -223,18 +220,16 @@
     CGFloat scale = (self.frame.size.width / 2.0) / kSGSphere_Radius;
     
     CGRect radarBounds = CGRectInset(self.bounds, -5.0, -5.0);
-    
+    CGPoint walkingOffset = self.arView.walkingOffset;
         
     // Annotaiton Views
     CGFloat bearing, distance;
     CGPoint origin = CGPointZero;
     UIButton* targetButton;
     for(SGAnnotationView* view in annotationViews) {
-        
         targetButton = view.radarTargetButton;
         
         if(!view.isCaptured) {
-        
             bearing = view.bearing;
         
             // The distance that we have here is not the distance
@@ -249,24 +244,17 @@
             origin.y += (walkingOffset.y * scale);
         
             if(CGRectContainsPoint(radarBounds, origin)) {
-                
                 targetButton.hidden = NO;
                 targetButton.frame = CGRectMake(origin.x - (targetButton.frame.size.width / 2.0),
                                                 origin.y - (targetButton.frame.size.height / 2.0),
                                                 targetButton.frame.size.width,
                                                 targetButton.frame.size.height);
                 [self bringSubviewToFront:targetButton];
-                
-            } else {
-             
+            } else
                 targetButton.hidden = YES;
-            }
             
-        } else {
-            
+        } else
             targetButton.hidden = YES;
-            
-        }   
     }
     
     if(shouldShowCardinalDirections) {

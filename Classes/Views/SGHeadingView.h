@@ -34,13 +34,20 @@
 
 #import <UIKit/UIKit.h>
 
-
+/*!
+* @class SGHeadingView 
+* @abstract The heading view that is displayed within a @link //simplegeo/ooc/cl/SGRadar SGRadar @/link. 
+*/
 @interface SGHeadingView : UIView {
 
     UIColor* headingViewColor;
     
 }
 
+/*!
+* @property
+* @abstract The color of the heading view.
+*/
 @property (nonatomic, retain) UIColor* headingViewColor;
 
 @end

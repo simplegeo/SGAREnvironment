@@ -65,7 +65,6 @@
 -(id) initWithFrame:(CGRect)frame
 {
 	if(self = [super initWithFrame:frame]) {
-        
 		self = [self initGLES];
 	}
     
@@ -87,10 +86,8 @@
 
 	context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
 	if(!context || ![EAGLContext setCurrentContext:context] || ![self createFramebuffer]) {
-        
 		[self release];
 		return nil;
-        
 	}
 	
     self.backgroundColor = [UIColor clearColor];
@@ -147,7 +144,6 @@
 	glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_DEPTH_ATTACHMENT_OES, GL_RENDERBUFFER_OES, depthRenderbuffer);
     
 	if(glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES) != GL_FRAMEBUFFER_COMPLETE_OES) {
-        
 		SGLog(@"SG3DOverlayView - failed to make complete framebuffer object %x", glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES));
 		return NO;
 	}
@@ -163,8 +159,7 @@
 	glDeleteRenderbuffersOES(1, &viewRenderbuffer);
 	viewRenderbuffer = 0;
 	
-	if(depthRenderbuffer)
-	{
+	if(depthRenderbuffer) {
 		glDeleteRenderbuffersOES(1, &depthRenderbuffer);
 		depthRenderbuffer = 0;
 	}
@@ -172,7 +167,6 @@
 
 - (void) startAnimation
 {
-    
     if(!displayLink)  {
         [delegate initiate];
 
@@ -244,17 +238,14 @@
         // Save the point for possible swipe
         singleGestureStartPoint = [touchOne locationInView:self];
         
-        if(tapCount == 1) {
-        
+        if(tapCount == 1)
             pinchTimer = [[NSTimer scheduledTimerWithTimeInterval:0.5
                                                            target:self
                                                          selector:@selector(ARSingleTapDetected:) 
                                                          userInfo:touchOne
                                                           repeats:NO] retain];
-        } else {
-            
+        else {
             if(pinchTimer) {
-                
                 [pinchTimer invalidate];
                 [pinchTimer release];
                 pinchTimer = nil;
@@ -263,39 +254,30 @@
                 
             if(delegate && [delegate respondsToSelector:@selector(view:ARDoubleTap:)])
                 [delegate view:self ARDoubleTap:singleGestureStartPoint];
-            
         }
-        
     } else if(numberOfTouches == 2) {
-        
         if(pinchTimer) {
-            
             [pinchTimer invalidate];
             [pinchTimer release];
             pinchTimer = nil;
-            
         }        
         
         UITouch* touchOne = [[allTouches allObjects] objectAtIndex:0];
         tapCount = [touchOne tapCount];
         
         if(tapCount == 1) {
-            
             UITouch* touchTwo = [[allTouches allObjects] objectAtIndex:1];
             
             CGPoint toPoint = [touchTwo locationInView:self];
             CGPoint fromPoint = [touchOne locationInView:self];
             initialTouchDistance = DistanceBetweenTwoPoints(fromPoint.x, fromPoint.y,
-                                                            toPoint.x, toPoint.y);                                                            
-            
+                                                            toPoint.x, toPoint.y);
         }
     }
-            
 }
 
 - (void) touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event
 {
-    
     if([pinchTimer isValid]) {
         [pinchTimer invalidate];
         pinchTimer = nil;
@@ -305,7 +287,6 @@
     
     NSInteger touchCount = [allTouches count];
     if(touchCount == 1) {
-        
         UITouch* touch = [touches anyObject];
         CGPoint singleGestureCurrentPoint = [touch locationInView:self];
         
@@ -313,33 +294,26 @@
         CGFloat deltaY = fabsf(singleGestureStartPoint.y - singleGestureCurrentPoint.y);
         
         if(!swipeOccurred && deltaX >= kMinimumGestureLength && deltaY <= kMaximumVariance) {
-            
             // Horizontal swipe
             if(delegate && [delegate respondsToSelector:@selector(view:ARHorizontalSwipeAtPoint:toPoint:)])
                 [delegate view:self ARHorizontalSwipeAtPoint:singleGestureStartPoint toPoint:singleGestureCurrentPoint];
             
             swipeOccurred = YES;
-            
         } else if(!swipeOccurred && deltaY >= kMinimumGestureLength && deltaX <= kMaximumVariance) {
-            
             // Vertical swipe
             if(delegate && [delegate respondsToSelector:@selector(view:ARVerticalSwipeAtPoint:toPoint:)])
                 [delegate view:self ARVerticalSwipeAtPoint:singleGestureStartPoint toPoint:singleGestureCurrentPoint];
 
             swipeOccurred = YES;
-            
-        } else {
-            
+        } else {            
             dragging = YES;
             
             // Normal movement
             if(delegate && [delegate respondsToSelector:@selector(view:ARMoveFromPoint:toPoint:)])
                 [delegate view:self ARMoveFromPoint:singleGestureStartPoint toPoint:singleGestureCurrentPoint];
-            
         }
         
     } else if(touchCount == 2) {
-        
         UITouch* touchOne = [[allTouches allObjects] objectAtIndex:0];
         UITouch* touchTwo = [[allTouches allObjects] objectAtIndex:1];
         
@@ -352,14 +326,12 @@
         BOOL validDelta = abs(finalDistance - initialTouchDistance) > 5.0f;
         
         if(validDelta && initialTouchDistance > finalDistance) {
-            
             zoomOccurred = YES;
             // Zoom out
             if(delegate && [delegate respondsToSelector:@selector(view:ARPinchAtPoint:andPoint:withDistance:)])
                 [delegate view:self ARPinchAtPoint:pointOne andPoint:pointTwo withDistance:finalDistance];
 
         } else if(validDelta && initialTouchDistance < finalDistance) {
-            
             zoomOccurred = YES;
             // Zoom in
             if(delegate && [delegate respondsToSelector:@selector(view:ARPullAtPoint:andPoint:withDistance:)])
@@ -375,27 +347,19 @@
     
     NSInteger touchCount = [allTouches count];
     if(touchCount == 2) {
-        
         if(!zoomOccurred) {
-            
             if(delegate && [delegate respondsToSelector:@selector(view:ARSingleTapAtPoint:andPoint:)]) {
-             
                 CGPoint pointOne = [[[allTouches allObjects] objectAtIndex:0] locationInView:self];
                 CGPoint pointTwo = [[[allTouches allObjects] objectAtIndex:1] locationInView:self];
                 
                 [delegate view:self ARSingleTapAtPoint:pointOne andPoint:pointTwo];
-                
             }
         }
-        
     }
     
-    if(dragging) {
-     
+    if(dragging)
         if(delegate && [delegate respondsToSelector:@selector(view:ARMoveEndedAtPoint:)])
             [delegate view:self ARMoveEndedAtPoint:[[allTouches anyObject] locationInView:self]];
-        
-    }
     
     if(delegate && [delegate respondsToSelector:@selector(view:tapReleased:)])
         [delegate view:self tapReleased:[[[allTouches allObjects] objectAtIndex:0] locationInView:self]];
@@ -410,12 +374,10 @@
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent*)event
 {
-    if(motion == UIEventSubtypeMotionShake) {
+    if(motion == UIEventSubtypeMotionShake)
         if(delegate && [delegate respondsToSelector:@selector(ARViewDidShake:)])
             [delegate ARViewDidShake:self];
-    }
 }
-
 
 - (void) ARSingleTapDetected:(NSTimer*)timer
 {
@@ -454,6 +416,7 @@
 	context = nil;
     
     [mainSubview release];
+    [displayLink release];
     
     if(pinchTimer)
         [pinchTimer release];

@@ -144,17 +144,6 @@
     return radar;
 }
 
-- (void) setwalkingOffset:(CGPoint)point
-{
-    walkingOffset = point;
-    radar.walkingOffset = point;
-}
-
-- (CGPoint) walkingOffset
-{
-    return walkingOffset;
-}
-
 - (void) dragStarted:(BOOL)started atPoint:(CGPoint)point
 {
     dragging = started;

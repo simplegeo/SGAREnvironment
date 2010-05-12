@@ -50,7 +50,6 @@
     return self;
 }
 
-
 - (void) drawRect:(CGRect)rect
 {
     [super drawRect:rect];

@@ -47,7 +47,6 @@
 - (id) initWithFrame:(CGRect)frame
 {
     if(self = [super initWithFrame:frame]) {
-        
         movableStack = [[NSMutableArray alloc] init];
         arView = nil;
         maxStackAmount = 100;
