@@ -46,6 +46,7 @@
 @interface SG3DOverlayView (Private)
 
 - (id) initGLES;
+- (void) drawView;
 - (BOOL) createFramebuffer;
 - (void) destroyFramebuffer;
 
@@ -54,8 +55,6 @@
 @end
 
 @implementation SG3DOverlayView
-
-@synthesize animationInterval;
 
 + (Class) layerClass
 {
