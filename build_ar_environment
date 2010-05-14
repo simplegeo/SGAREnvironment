@@ -1,15 +1,15 @@
 #!/bin/bash
 
-ARVIEW_PATH=.
-NAME=SGARView
+AR_ENV_PATH=.
+NAME=SGAREnvironment
 VERSION=0.3.4
-ARVIEW_DIR=$ARVIEW_PATH/$NAME-v$VERSION
+AR_ENV_DIR=$AR_ENV_PATH/$NAME-v$VERSION
 
 RESOURCE_PATH=Resources
 IMAGE_PATH=$RESOURCE_PATH/Images
-ARVIEW_IMAGE_DIR=$ARVIEW_DIR/Images
+AR_ENV_IMAGE_DIR=$AR_ENV_DIR/Images
 
-HEADER_DIR=$ARVIEW_DIR/Headers
+HEADER_DIR=$AR_ENV_DIR/Headers
 
 LIBRARY_NAME=lib$NAME.a
 SIM_LIBRARY_NAME=lib$NAME-sim.a
@@ -20,11 +20,11 @@ SIM_LIBRARY_PATH=build/Release-iphonesimulator/$LIBRARY_NAME
 ROOT_HEADER_PATH=./Classes
 
 HEADER_DOC_DIR=Resources/HeaderDoc
-DOC_DIR=$ARVIEW_DIR/Documentation
+DOC_DIR=$AR_ENV_DIR/Documentation
 CSS_DIR=$DOC_DIR/css
 
-rm -rf $ARVIEW_DIR
-mkdir $ARVIEW_DIR $ARVIEW_DIR/iphoneos $ARVIEW_DIR/iphonesimulator $DOC_DIR $HEADER_DIR $CSS_DIR
+rm -rf $AR_ENV_DIR
+mkdir $AR_ENV_DIR $AR_ENV_DIR/iphoneos $AR_ENV_DIR/iphonesimulator $DOC_DIR $HEADER_DIR $CSS_DIR
 
 HEADER_FILES=$(find $ROOT_HEADER_PATH -name "*.h")
 for header_file in $HEADER_FILES
@@ -37,7 +37,7 @@ SDKs=( iphoneos3.2 iphonesimulator3.2 )
 
 for sdk in ${SDKs[@]}
 do
-  xcodebuild -target SGARView -sdk $sdk clean build
+  xcodebuild -target $NAME -sdk $sdk clean build
   if [ $? -gt 0 ]; then
       echo "ERROR!"
       exit
@@ -46,58 +46,32 @@ do
 done
 
 # Static Libraries
-cp $LIBRARY_PATH $ARVIEW_DIR/iphoneos/$LIBRARY_NAME
-cp $SIM_LIBRARY_PATH $ARVIEW_DIR/iphonesimulator/$LIBRARY_NAME
+cp $LIBRARY_PATH $AR_ENV_DIR/iphoneos/$LIBRARY_NAME
+cp $SIM_LIBRARY_PATH $AR_ENV_DIR/iphonesimulator/$LIBRARY_NAME
 
 # Produce HeaderDocs
 cp -r $HEADER_DOC_DIR/Images $DOC_DIR
 cp $HEADER_DOC_DIR/Documentation.config headerDoc2HTML.config
-cp $HEADER_DOC_DIR/SDK.hdoc $ARVIEW_DIR/this.hdoc
+cp $HEADER_DOC_DIR/SDK.hdoc $AR_ENV_DIR/this.hdoc
 cp $HEADER_DOC_DIR/TOCmaster.css $CSS_DIR
-
-# Remove header files that are not allowed in the SDK
-# along with private methods
-BEGIN_PRIVATE="__PRIVATE__"
-END_PRIVATE="__END__"
-HEADER_DOC_INCLUDE="__HEADER_DOC_INCLUDE__"
-
-HEADER_FILES=$(find $ARVIEW_DIR -name "*.h")
-
-TEMP=temp.txt
-
-for file in $HEADER_FILES
-do
-  first_line=$(sed q $file)
-  if [ "$first_line" == "$HEADER_DOC_INCLUDE" ]; then
-    sed "-e 1,1d" "-e /$BEGIN_PRIVATE/, /$END_PRIVATE/d" $file > $TEMP
-    echo Found  $file
-    cp $TEMP $file
-  else
-    rm $file
-fi
-done
-
-rm -r $TEMP
-
-cp Classes/Model/*.h $HEADER_DIR
 
 headerdoc2HTML -H -o $DOC_DIR $HEADER_DIR
 gatherheaderdoc $DOC_DIR $NAME.html
 
 rm headerDoc2HTML.config
-rm $ARVIEW_DIR/this.hdoc
+rm $AR_ENV_DIR/this.hdoc
 
-cp README $ARVIEW_DIR
-cp LICENSE.txt $ARVIEW_DIR
+cp README $AR_ENV_DIR
+cp LICENSE.txt $AR_ENV_DIR
 
 # Copy images
-mkdir $ARVIEW_IMAGE_DIR
-cp -r $IMAGE_PATH/SG*.png $ARVIEW_IMAGE_DIR
+mkdir $AR_ENV_IMAGE_DIR
+cp -r $IMAGE_PATH/SG*.png $AR_ENV_IMAGE_DIR
 
 for i in $*
 do
 	case $i in
 	--zip)
-		zip -r $ARVIEW_DIR.zip $ARVIEW_DIR
+		zip -r $AR_ENV_DIR.zip $AR_ENV_DIR
 	esac
 done
