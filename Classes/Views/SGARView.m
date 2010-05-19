@@ -54,7 +54,7 @@
 - (void) createGraphLines;
 
 - (void) drawGraphLines;
-- (void) drawRadarWitHeading:(double)heading roll:(double)roll;
+- (void) drawRadarWithHeading:(double)heading roll:(double)roll;
 - (void) drawMovableStackAtPoint:(CGPoint)point roll:(double)roll;
 
 - (void) dragStarted:(BOOL)started atPoint:(CGPoint)point;
@@ -272,7 +272,7 @@
         [self drawGraphLines];
     
     if(radar && !radar.hidden && chromeComponent & kSGChromeComponent_Radar)
-        [self drawRadarWithAnnotationViews:objects heading:heading roll:roll];
+        [self drawRadarWithHeading:heading roll:roll];
     
     if(movableStack && chromeComponent & kSGChromeComponent_MovableStack)
         [self drawMovableStackAtPoint:touchPoint roll:roll];

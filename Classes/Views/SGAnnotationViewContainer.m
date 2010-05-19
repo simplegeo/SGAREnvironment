@@ -196,7 +196,7 @@
  
 - (void) setTopImage
 {
-    if([views count]) {
+    if([views count])
         [self setImage:((SGAnnotationView*)[views objectAtIndex:[views count] - 1]).containerImage 
               forState:UIControlStateNormal];
     else

@@ -33,6 +33,7 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @class SG3DOverlayEnvironment;
 @class SG3DOverlayView;

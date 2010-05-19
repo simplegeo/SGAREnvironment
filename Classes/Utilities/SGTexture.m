@@ -42,11 +42,11 @@
 @end
 
 @implementation SGTexture
-@synthesize size, width, height, name, maxS, maxT, pixelFormat;
+@synthesize size, width, height, name, pixelFormat;
 
-- (id) initWithImage:(UIImage*)image
+- (id) initWithImage:(UIImage*)uImage
 {
-	CGImageRef image = [uiImage CGImage];
+	CGImageRef image = [uImage CGImage];
     
 	if(!image) {
 		SGLog(@"SGTexture - Image is Null");

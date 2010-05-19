@@ -220,7 +220,6 @@
     CGFloat scale = (self.frame.size.width / 2.0) / kSGSphere_Radius;
     
     CGRect radarBounds = CGRectInset(self.bounds, -5.0, -5.0);
-    CGPoint walkingOffset = self.arView.walkingOffset;
         
     // Annotaiton Views
     CGFloat bearing, distance;
