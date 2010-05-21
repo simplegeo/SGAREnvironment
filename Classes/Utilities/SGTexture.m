@@ -54,6 +54,7 @@
 	}
     
     if(self = [super init]) {
+        name = 0;
         CGImageAlphaInfo info = CGImageGetAlphaInfo(image);
         BOOL hasAlpha = ((info == kCGImageAlphaPremultipliedLast) || (info == kCGImageAlphaPremultipliedFirst) || (info == kCGImageAlphaLast) || (info == kCGImageAlphaFirst) ? YES : NO);
         
@@ -145,25 +146,25 @@
             imageData = malloc(height * width * 4);
             context = CGBitmapContextCreate(imageData, width, height, 8, 4 * width, colorSpace, kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
             CGColorSpaceRelease(colorSpace);
-            format = GL_RGBA;
-            type = GL_UNSIGNED_BYTE;
             internalFormat = GL_RGBA;
+            format = GL_UNSIGNED_BYTE;
+            type = GL_RGBA;
             break;
         case kSGTexturePixelFormat_RGB565:
             colorSpace = CGColorSpaceCreateDeviceRGB();
             imageData = malloc(height * width * 4);
             context = CGBitmapContextCreate(imageData, width, height, 8, 4 * width, colorSpace, kCGImageAlphaNoneSkipLast | kCGBitmapByteOrder32Big);
             CGColorSpaceRelease(colorSpace);
-            format = GL_RGB;
-            type = GL_UNSIGNED_SHORT_5_6_5;
-            internalFormat = GL_RGBA;
+            internalFormat = GL_RGB;
+            format = GL_UNSIGNED_SHORT_5_6_5;
+            type = GL_RGBA;
             break;
         case kSGTexturePixelFormat_A8:
             imageData = malloc(height * width);
             context = CGBitmapContextCreate(imageData, width, height, 8, width, NULL, kCGImageAlphaOnly);
-            format = GL_ALPHA;
-            type = GL_UNSIGNED_BYTE;
             internalFormat = GL_ALPHA;
+            format = GL_UNSIGNED_BYTE;
+            type = GL_ALPHA;
             break;				
         default:
             [NSException raise:NSInternalInconsistencyException format:@"Invalid pixel format"];

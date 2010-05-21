@@ -202,11 +202,11 @@
 	
 	// If our drawing delegate needs to have the view setup, then call -setupView: and flag that it won't need to be called again.
 	if(!delegateSetup || currentSphereRadius != kSGSphere_Radius) {
-		[delegate setupView:self];
+        [delegate setupView:self];
         
-		delegateSetup = YES;
+        delegateSetup = YES;
         currentSphereRadius = kSGSphere_Radius;   
-	}
+    }
 	
 	glBindFramebufferOES(GL_FRAMEBUFFER_OES, viewFramebuffer);
     

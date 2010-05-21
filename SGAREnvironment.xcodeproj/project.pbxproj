@@ -110,6 +110,7 @@
 		4AEDB7B31121E5F7003C1949 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4AEDB7B51121E5F7003C1949 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4AEDBA831121F32D003C1949 /* SGAREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAREnvironment.h; sourceTree = "<group>"; };
+		4AF85B3711A5E7F500B97ADA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libSGAREnvironment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGAREnvironment.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -149,6 +150,7 @@
 				4A64A4861120964700D4E22D /* Resources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				4AF85B3711A5E7F500B97ADA /* LICENSE */,
 			);
 			name = SGARView;
 			sourceTree = "<group>";
@@ -411,7 +413,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = SGAREnvironment;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos3.1;
 			};
 			name = Debug;
 		};
@@ -430,7 +432,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = SGAREnvironment;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos3.1;
 			};
 			name = Release;
 		};

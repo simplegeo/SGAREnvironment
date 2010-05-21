@@ -49,8 +49,8 @@
 
 @implementation SGAnnotationViewContainer
 
-@synthesize highlightedImage;
-@dynamic arView, normalImage;
+@synthesize highlightedImage, arView;
+@dynamic normalImage;
 
 - (id) initWithFrame:(CGRect)frame
 {
@@ -157,16 +157,6 @@
     
     [views removeAllObjects];
     [self setTopImage];
-}
-
-- (void) setarView:(SGARView*)view
-{
-    arView = view;
-}
-
-- (SGARView*) arView
-{
-    return arView;
 }
 
 #pragma mark -

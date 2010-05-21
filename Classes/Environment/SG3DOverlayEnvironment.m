@@ -222,7 +222,7 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 
 - (void) drawView:(SG3DOverlayView*)view
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
         
     glMatrixMode(GL_MODELVIEW);
@@ -492,7 +492,6 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
                         [texture drawAtPoint:CGPointMake(0.0, -texture.size.height / 2.0)];
                         glDisableClientState(GL_TEXTURE_COORD_ARRAY);
                         glDisable(GL_TEXTURE_2D);
-                    
                     }
                 }
                 

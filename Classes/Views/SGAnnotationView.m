@@ -50,9 +50,9 @@
 
 @implementation SGAnnotationView
 
-@dynamic annotation, isSelected;
+@dynamic annotation;
 @synthesize detailedLabel, titleLabel, messageLabel, targetImageView, photoImageView, closeButton, inspectorType, targetType, isCaptured, isCapturable;
-@synthesize distance, bearing, altitude, isBeingInspected;
+@synthesize distance, bearing, altitude, isBeingInspected, isSelected;
 @synthesize point, needNewTexture, delegate, enableOpenGL, pinColor, containerImage, radarTargetButton;
 @dynamic texture;
 
@@ -151,10 +151,8 @@
     [self inspectView:NO];
 }
 
-
 #pragma mark -
 #pragma mark Accessor methods 
- 
 
 - (NSString*) reuseIdentifier
 {
@@ -164,7 +162,6 @@
 - (void) setAnnotation:(id<MKAnnotation>)newAnnotation
 {
     annotation = newAnnotation;
-
     self.needNewTexture = YES;
 }
 

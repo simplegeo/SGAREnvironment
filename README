@@ -1,12 +1,5 @@
 SGAREnvironment v0.3.5
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-NOTE: THIS PROJECT HAS GONE THROUGH SOME MAJOR REFACTORING AND HAS NOT BEEN TESTED YET. USE AT YOUR DISGRESSION
-OR WAIT FOR SIMPLEGEO TO FIX/TEST IT.
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 ================================================================================
 ABSTRACT:
 
@@ -22,12 +15,12 @@ USAGE:
 and Foundation.
 4. Goto your target's info and add "-all_load -ObjC -l SGAREnvironment" to the "Other Linker Flags" setting under the Build tag. This will
 inform the linker to load the categories from the static library.
-5. Import SimpleGeo.h in your pre-compiled header file or wherever you plan on accessing the library.
+5. Import SGAREnvironment.h in your pre-compiled header file or wherever you plan on accessing the library.
 
 ================================================================================
 BUILD REQUIREMENTS:
 
-iPhone SDK 3.2
+iPhone SDK 3.1
 
 Frameworks
 - CoreLocation

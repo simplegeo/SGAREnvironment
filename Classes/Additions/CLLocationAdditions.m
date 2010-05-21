@@ -64,11 +64,7 @@
 
 - (double) distanceToLocation:(CLLocation*)location
 {
-#ifdef __IPHONE_3_2
-    double distance = [self distanceFromLocation:location];
-#else
-    double distance = [currentLocation getDistanceFrom:viewLocation];
-#endif
+    double distance = [self getDistanceFrom:location];
     
     return distance;
 }

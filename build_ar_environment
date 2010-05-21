@@ -33,7 +33,7 @@ do
   cp $header_file $HEADER_DIR/
 done
 
-SDKs=( iphoneos3.2 iphonesimulator3.2 )
+SDKs=( iphoneos3.1 iphonesimulator3.1 )
 
 for sdk in ${SDKs[@]}
 do
