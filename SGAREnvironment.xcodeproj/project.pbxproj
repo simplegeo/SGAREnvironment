@@ -101,9 +101,9 @@
 		4A64A4971120964700D4E22D /* SGAREnvironment_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAREnvironment_Prefix.pch; sourceTree = "<group>"; };
 		4A722F5D1198BFF80078ABCE /* GLU+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLU+iPhone.h"; sourceTree = "<group>"; };
 		4A722F5E1198BFF80078ABCE /* GLU+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GLU+iPhone.m"; sourceTree = "<group>"; };
-		4A722FA81198C3960078ABCE /* build_ar_environment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_ar_environment; sourceTree = "<group>"; };
 		4A722FA91198C3B50078ABCE /* AccelerometerFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerFilter.h; sourceTree = "<group>"; };
 		4A722FAA1198C3B50078ABCE /* AccelerometerFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerFilter.m; sourceTree = "<group>"; };
+		4A7551E711DBD24D003E8D8A /* build_dist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_dist; sourceTree = "<group>"; };
 		4AEDB7AD1121E5F7003C1949 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4AEDB7AF1121E5F7003C1949 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4AEDB7B11121E5F7003C1949 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -144,7 +144,7 @@
 		0867D691FE84028FC02AAC07 /* SGARView */ = {
 			isa = PBXGroup;
 			children = (
-				4A722FA81198C3960078ABCE /* build_ar_environment */,
+				4A7551E711DBD24D003E8D8A /* build_dist */,
 				4A64A4531120964700D4E22D /* Classes */,
 				4A64A4851120964700D4E22D /* README */,
 				4A64A4861120964700D4E22D /* Resources */,
@@ -413,7 +413,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = SGAREnvironment;
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -432,7 +432,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = SGAREnvironment;
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};

@@ -33,7 +33,12 @@ do
   cp $header_file $HEADER_DIR/
 done
 
-SDKs=( iphoneos3.1 iphonesimulator3.1 )
+if [ $1 ]; then
+  VERSION=$1
+else
+  VERSION=4.0
+fi
+SDKs=( iphoneos$VERSION iphonesimulator$VERSION )
 
 for sdk in ${SDKs[@]}
 do
@@ -62,7 +67,7 @@ rm headerDoc2HTML.config
 rm $AR_ENV_DIR/this.hdoc
 
 cp README $AR_ENV_DIR
-cp LICENSE.txt $AR_ENV_DIR
+cp LICENSE $AR_ENV_DIR
 
 # Copy images
 mkdir $AR_ENV_IMAGE_DIR
