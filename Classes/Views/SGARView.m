@@ -59,6 +59,12 @@
 
 - (void) dragStarted:(BOOL)started atPoint:(CGPoint)point;
 
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+
+- (AVCaptureSession*) defaultCaptureSession;
+
+#endif
+
 @end
 
 @implementation SGARView
@@ -93,9 +99,16 @@
         
         [self createGraphLines];
         
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
         
+        captureSession = nil;
+        cameraBackgroundLayer = nil;
+        
+#endif       
+
         self.backgroundColor = [UIColor clearColor];
         [self setUpOverlayView];
+                
     }
     
     return self;
@@ -105,7 +118,14 @@
 #pragma mark Setup methods 
  
 - (void) setUpOverlayView
-{    
+{   
+
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+    
+    [self startCaptureSession];
+    
+#endif
+
     enviornmentDrawer = [[SG3DOverlayEnvironment alloc] init];
     enviornmentDrawer.arView = self;
     
@@ -114,6 +134,70 @@
     
     [self addSubview:openGLOverlayView];
 }
+
+
+#pragma mark -
+#pragma mark Accessor methods 
+
+
+#pragma mark -
+#pragma mark UIView overrides 
+
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+
+- (AVCaptureSession*) defaultCaptureSession
+{
+    AVCaptureSession* session = [[[AVCaptureSession alloc] init] autorelease];
+    AVCaptureDevice* videoCaptureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    NSError* error = nil;
+    AVCaptureDeviceInput* videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoCaptureDevice error:&error];
+    if(videoInput)
+        [captureSession addInput:videoInput];
+    else
+        SGLog([error description]);
+
+    return session;
+}
+
+- (void) setNeedsLayout
+{
+    [super setNeedsLayout];
+    [self resizeCameraBackgroundLayer];
+}
+
+- (void) resizeCameraBackgroundLayer
+{
+    if(cameraBackgroundLayer) {
+        [cameraBackgroundLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+        cameraBackgroundLayer.bounds = self.bounds;
+    }
+}
+
+- (void) startCaptureSession
+{
+    if(!captureSession)
+        captureSession = [self defaultCaptureSession];
+    
+    if(!cameraBackgroundLayer) {
+        cameraBackgroundLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:captureSession];
+        [self.layer insertSublayer:cameraBackgroundLayer atIndex:0];
+    }
+    
+    if(!captureSession.running)
+        [captureSession startRunning];
+
+    [self setNeedsLayout];
+}
+
+- (void) stopCaptureSession
+{
+    if(captureSession.running)
+        [captureSession stopRunning];
+    
+    [self setNeedsLayout];
+}
+
+#endif
 
 #pragma mark -
 #pragma mark Accessor methods 

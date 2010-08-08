@@ -63,7 +63,16 @@
 * creates its own bars, you can still access them by calling the usual barrage of methods (e.g. setToolbarItems:animated:). The default is
 * that both bars have a black, translucent tint color. 
 */
+
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+
+@interface SGARNavigationViewController : UINavigationController <SGARViewDataSource, UINavigationControllerDelegate> {
+
+#else
+
 @interface SGARNavigationViewController : UIImagePickerController <SGARViewDataSource, UINavigationControllerDelegate> {
+    
+#endif
  
     id<SGARNavigationViewControllerDataSource> dataSource;
  
@@ -73,13 +82,16 @@
 
     @private
     NSMutableArray* annotations;
- 
  	NSMutableArray* buckets;
  
+#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+
     UINavigationBar* myNavigationBar;
     UINavigationItem* myNavigationItem;
     UIToolbar* myToolbar;
- 
+
+#endif
+
     BOOL isModal;
 }
 
@@ -145,6 +157,8 @@
 */
 - (BOOL) isModal;
 
+#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+
 /*!
 * @method navBar
 * @abstract ￼ This is the actual navigation bar used by this view controller.
@@ -153,6 +167,9 @@
 * @result ￼ The navigation bar that is displayed by this navigation view controller.
 */
 - (UINavigationBar*) navBar;
+
+#endif
+
 
 /*!
 * @method amountOfBuckets

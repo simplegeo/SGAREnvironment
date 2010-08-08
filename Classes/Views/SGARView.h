@@ -35,6 +35,12 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+
+#import <AVFoundation/AVFoundation.h>
+
+#endif
+
 @class SG3DOverlayEnvironment;
 @class SG3DOverlayView;
 
@@ -101,6 +107,13 @@ typedef NSUInteger SGChromeComponent;
     CGPoint touchPoint;
  
     NSMutableArray* containers;
+    
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+    
+    AVCaptureVideoPreviewLayer* cameraBackgroundLayer;
+    AVCaptureSession* captureSession;
+
+#endif
 }
 
 
@@ -255,6 +268,14 @@ typedef NSUInteger SGChromeComponent;
 - (void) drawComponent:(SGChromeComponent)chromeComponent heading:(double)heading roll:(double)roll;
 - (BOOL) hitTestAtPoint:(CGPoint)point withEvent:(SGControlEvent)event;
 - (void) empty;
+
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+
+- (void) startCaptureSession;
+- (void) stopCaptureSession;
+- (void) resizeCameraBackgroundLayer;
+
+#endif
 
 @end
 

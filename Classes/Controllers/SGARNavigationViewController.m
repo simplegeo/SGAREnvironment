@@ -69,12 +69,17 @@
 {
     arView = [[SGARView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0)];
     arView.dataSource = self;
-    
+
+#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+
     myNavigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, 18.0, 320.0, 44.0)];
     myNavigationBar.tintColor = [UIColor blackColor];
     myNavigationBar.translucent = YES;
     
-    myToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, 480.0 - 44.0, 320.0, 44.0)];
+    myToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, 
+                                                            480.0 - myNavigationBar.frame.size.height,
+                                                            320.0,
+                                                            myNavigationBar.frame.size.height)];
     myToolbar.tintColor = [UIColor blackColor];
     myToolbar.translucent = YES;
     
@@ -86,7 +91,9 @@
     [myNavigationBar pushNavigationItem:myNavigationItem animated:NO];
     
     [arView addSubview:myNavigationBar];
-    [arView addSubview:myToolbar];       
+    [arView addSubview:myToolbar];
+
+#endif
 }
 
 - (BOOL) isModal
@@ -152,6 +159,8 @@
 
 #pragma mark -
 #pragma mark UIViewController overrides 
+
+#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
  
 - (UINavigationBar*) navBar
 {
@@ -196,17 +205,28 @@
     return myToolbar;
 }
 
+#endif
+
 - (void) loadView
 {
     [super loadView];
     
     self.view.backgroundColor = [UIColor clearColor];
+
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
     
+    [self.view addSubview:arView];
+
+#else
+
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         self.sourceType = UIImagePickerControllerSourceTypeCamera;
         self.showsCameraControls = NO;
         self.cameraOverlayView = arView;
     }
+
+#endif
+
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -278,10 +298,14 @@
 {
     [annotations release];
     [buckets release];
-    
+
+#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+
     [myNavigationItem release];
     [myNavigationBar release];
     [myToolbar release];
+
+#endif
     
     [arView release];
         
