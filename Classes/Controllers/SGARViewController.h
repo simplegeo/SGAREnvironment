@@ -1,5 +1,5 @@
 //
-//  SGARNavigationViewController.h
+//  SGARViewController.h
 //  SGAREnvironment
 //
 //  Copyright (c) 2009-2010, SimpleGeo
@@ -32,12 +32,12 @@
 //  Created by Derek Smith.
 //
 
-@protocol SGARNavigationViewControllerDataSource;
+@protocol SGARViewControllerDataSource;
 
 #import "SGARView.h"
 
 /*!
-* @class SGARNavigationViewController
+* @class SGARViewController
 * @abstract A subclass of UIImagePickerController that assigns an instance of @link //simplegeo/ooc/cl/SGARView SGARView @/link
 * to the cameraOverlayView property.
 * @discussion ￼ As opposed to creating your own UIImagePickerController and overlaying the AR view, this class creates an
@@ -51,7 +51,7 @@
 * is to display @link arView arView @/link over a selected image. The arView will not be a subview of any view so it would
 * have to be added manually.
 *
-* The methods from @link SGARNavigationViewControllerDataSource SGARNavigationViewControllerDataSource @/link
+* The methods from @link SGARViewControllerDataSource SGARViewControllerDataSource @/link
 * will create a bucket list. The data structure will then be used to feed the AR view through the proper delegate callbacks. To
 * control which bucket is being displayed make sure to call @link reloadBucketAtIndex: reloadBucketAtIndex: @/link. Only a single
 * bucket is displayed at any given time in the AR view. There is no limitation to the amount of annotations a bucket can have.
@@ -66,15 +66,15 @@
 
 #if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
 
-@interface SGARNavigationViewController : UINavigationController <SGARViewDataSource, UINavigationControllerDelegate> {
+@interface SGARViewController : UINavigationController <SGARViewDataSource, UINavigationControllerDelegate> {
 
 #else
 
-@interface SGARNavigationViewController : UIImagePickerController <SGARViewDataSource, UINavigationControllerDelegate> {
+@interface SGARViewController : UIImagePickerController <SGARViewDataSource> {
     
 #endif
  
-    id<SGARNavigationViewControllerDataSource> dataSource;
+    id<SGARViewControllerDataSource> dataSource;
  
     SGARView* arView;
 
@@ -104,9 +104,9 @@
 
 /*!
 * @property
-* @abstract The @link //simplegeo/ooc/cl/SGARNavigationViewControllerDataSource data source @/link that populates the @link arView arView @/link.
+* @abstract The @link //simplegeo/ooc/cl/SGARViewControllerDataSource data source @/link that populates the @link arView arView @/link.
 */
-@property (nonatomic, assign) id<SGARNavigationViewControllerDataSource> dataSource;
+@property (nonatomic, assign) id<SGARViewControllerDataSource> dataSource;
 
 /*!
 * @property
@@ -118,7 +118,7 @@
 * @method reloadAllBuckets
 * @abstract ￼ Runs through the entire process of collecting and displaying @link //simplegeo/ooc/cl/SGRecordAnnotation record annotations @/link
 * in the @link arView arView @/link.
-* @discussion If any record annotations have been registered with the @link SGARNavigationViewController SGARNavigationViewController @/link,
+* @discussion If any record annotations have been registered with the @link SGARViewController SGARViewController @/link,
 * they will be released.
 */
 - (void) reloadAllBuckets;
@@ -163,7 +163,7 @@
 * @method navBar
 * @abstract ￼ This is the actual navigation bar used by this view controller.
 * @discussion ￼ If you attempt to access the navigationBar via "nvc.navigationBar", you will not
-* access the proper navigation bar. See @link SGARNavigationViewController SGARNavigationViewController @/linkfor a more detailed discussion.
+* access the proper navigation bar. See @link SGARViewController SGARViewController @/linkfor a more detailed discussion.
 * @result ￼ The navigation bar that is displayed by this navigation view controller.
 */
 - (UINavigationBar*) navBar;
@@ -181,7 +181,7 @@
 @end
 
 /*!
-* @protocol SGARNavigationViewControllerDataSource
+* @protocol SGARViewControllerDataSource
 * @abstract ￼ The data source provides all callback methods that build the bucket list structure
 * for the @link SGARNavigationController SGARNavigationController @/link.
 * @discussion There are three required methods that need to be implemented. Each are important
@@ -189,7 +189,7 @@
 * and, consequentally, the @link arView arView @/link. The single, optional method @link viewController:didAddAnnotationView: viewController:didAddAnnotationView: @/link
 * allows the data source to be aware when new views have been loaded into the AR enviornment.
 */
-@protocol SGARNavigationViewControllerDataSource <NSObject>
+@protocol SGARViewControllerDataSource <NSObject>
 
 @required
 
@@ -202,33 +202,33 @@
 *
 * When creating your SGAnnotationViews, it is not required to set the @link //simplegeo/ooc/instp/SGAnnotationView/annotation annotation @/link property.
 * The @link arView arView @/link will assign the passed in annotation to the view if the view does not come assigned with an annotation.
-* @param nvc The @link SGARNavigationViewContorller SGARNavigationViewController @/link that requires a new view.
+* @param nvc The @link SGARNavigationViewContorller SGARViewController @/link that requires a new view.
 * @param annotation ￼The @link SGAnnotation SGAnnotation @/link that needs a view.
 * @param bucketIndex ￼The index of the bucket that is currently being loaded into the AR view.
 * @result ￼ The @link //simplegeo/ooc/cl/SGAnnotationView SGAnnotationView @/link to be used
 * with the @link //simplegeo/ooc/intf/SGRecordAnnotation SGRecordAnnotation @/link. If nil is returned,
 * then no annotation view will be displayed for the annotation.
 */
-- (SGAnnotationView*) viewController:(SGARNavigationViewController*)nvc
+- (SGAnnotationView*) viewController:(SGARViewController*)nvc
                    viewForAnnotation:(id<MKAnnotation>)annotation 
                        atBucketIndex:(NSInteger)bucketIndex;
 
 /*!
 * @method viewController:annotationsForBucketAtIndex:
 * @abstract Asks for all the annotations that will be placed in the bucket.
-* @param nvc ￼The @link SGARNavigationViewController SGARNavigationViewController @/link that needs a bucket to be filled.
+* @param nvc ￼The @link SGARViewController SGARViewController @/link that needs a bucket to be filled.
 * @param bucketIndex ￼The index of the bucket to be filled.
 * @result ￼ An array of @link //simplegeo/ooc/cl/SGRecordAnnotation SGRecordAnnotations @/link that will be placed in the bucket.
 */
-- (NSArray*) viewController:(SGARNavigationViewController*)nvc annotationsForBucketAtIndex:(NSInteger)bucketIndex;
+- (NSArray*) viewController:(SGARViewController*)nvc annotationsForBucketAtIndex:(NSInteger)bucketIndex;
 
 /*!
 * @method viewControllerNumberOfBuckets:
 * @abstract ￼The number of buckets to create.
-* @param nvc ￼The @link SGARNavigationViewController SGARNavigationViewController @/link that is asking for the amount of buckets.
+* @param nvc ￼The @link SGARViewController SGARViewController @/link that is asking for the amount of buckets.
 * @result ￼The number of buckets the to create.
 */
-- (NSInteger) viewControllerNumberOfBuckets:(SGARNavigationViewController*)nvc;
+- (NSInteger) viewControllerNumberOfBuckets:(SGARViewController*)nvc;
 
 @optional
 
@@ -236,10 +236,10 @@
 * @method viewController:didAddAnnotationsViews:
 * @abstract ￼Notifies the delegate when @link //simplegeo/ooc/cl/SGAnnotationView SGAnnotationViews @/link have been
 * added to the @link //simplegeo/ooc/cl/SGARView SGARView @/link.
-* @param nvc ￼The @link SGARNavigationViewController SGARNavigationViewController @/link that has added the views to the @link arView arView @/link.
+* @param nvc ￼The @link SGARViewController SGARViewController @/link that has added the views to the @link arView arView @/link.
 * @param annotationViews ￼The annotation views that were added.
 */
-- (void) viewController:(SGARNavigationViewController*)nvc didAddAnnotationsViews:(NSArray*)annotationViews;
+- (void) viewController:(SGARViewController*)nvc didAddAnnotationsViews:(NSArray*)annotationViews;
 
 @end
 

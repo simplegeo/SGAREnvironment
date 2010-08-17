@@ -1,5 +1,5 @@
 //
-//  SGARNavigationViewController.m
+//  SGARViewController.m
 //  SGAREnvironment
 //
 //  Copyright (c) 2009-2010, SimpleGeo
@@ -32,10 +32,10 @@
 //  Created by Derek Smith.
 //
 
-#import "SGARNavigationViewController.h"
+#import "SGARViewController.h"
 #import "SGMovableStack.h"
 
-@interface SGARNavigationViewController (Private)
+@interface SGARViewController (Private)
 
 - (void) loadObjectsIntoBucket:(NSInteger)index;
 - (void) setupViewableObjects;
@@ -45,7 +45,7 @@
 
 @end
 
-@implementation SGARNavigationViewController
+@implementation SGARViewController
 
 @synthesize arView, dataSource, bucketIndex;
 
@@ -215,7 +215,14 @@
 
 #if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
     
+    CGFloat toolbarHeight = self.navigationBar.frame.size.height;
+    arView.bounds = CGRectMake(0.0,
+                               toolbarHeight, 
+                               320.0,
+                               480.0 - toolbarHeight * 2.0);
     [self.view addSubview:arView];
+    [self.view sendSubviewToBack:arView];
+    [arView setNeedsLayout];
 
 #else
 

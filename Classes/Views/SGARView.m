@@ -152,7 +152,7 @@
     NSError* error = nil;
     AVCaptureDeviceInput* videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoCaptureDevice error:&error];
     if(videoInput)
-        [captureSession addInput:videoInput];
+        [session addInput:videoInput];
     else
         SGLog([error description]);
 
@@ -169,7 +169,7 @@
 {
     if(cameraBackgroundLayer) {
         [cameraBackgroundLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-        cameraBackgroundLayer.bounds = self.bounds;
+        cameraBackgroundLayer.frame = self.bounds;
     }
 }
 

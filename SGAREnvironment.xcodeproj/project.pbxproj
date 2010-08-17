@@ -10,8 +10,8 @@
 		4A476AFB11619D960066F747 /* CLLocationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A476AF911619D960066F747 /* CLLocationAdditions.h */; };
 		4A476AFC11619D960066F747 /* CLLocationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A476AFA11619D960066F747 /* CLLocationAdditions.m */; };
 		4A574C061152C88600794035 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A574C051152C88600794035 /* MapKit.framework */; };
-		4A64A49A1120964700D4E22D /* SGARNavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4581120964700D4E22D /* SGARNavigationViewController.h */; };
-		4A64A49B1120964700D4E22D /* SGARNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4591120964700D4E22D /* SGARNavigationViewController.m */; };
+		4A64A49A1120964700D4E22D /* SGARViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4581120964700D4E22D /* SGARViewController.h */; };
+		4A64A49B1120964700D4E22D /* SGARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4591120964700D4E22D /* SGARViewController.m */; };
 		4A64A4A31120964700D4E22D /* SG3DOverlayEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4631120964700D4E22D /* SG3DOverlayEnvironment.h */; };
 		4A64A4A41120964700D4E22D /* SG3DOverlayEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4641120964700D4E22D /* SG3DOverlayEnvironment.m */; };
 		4A64A4A51120964700D4E22D /* SGControlEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4651120964700D4E22D /* SGControlEvents.h */; };
@@ -55,8 +55,8 @@
 		4A476AF911619D960066F747 /* CLLocationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationAdditions.h; sourceTree = "<group>"; };
 		4A476AFA11619D960066F747 /* CLLocationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLocationAdditions.m; sourceTree = "<group>"; };
 		4A574C051152C88600794035 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		4A64A4581120964700D4E22D /* SGARNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARNavigationViewController.h; sourceTree = "<group>"; };
-		4A64A4591120964700D4E22D /* SGARNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGARNavigationViewController.m; sourceTree = "<group>"; };
+		4A64A4581120964700D4E22D /* SGARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARViewController.h; sourceTree = "<group>"; };
+		4A64A4591120964700D4E22D /* SGARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGARViewController.m; sourceTree = "<group>"; };
 		4A64A4631120964700D4E22D /* SG3DOverlayEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SG3DOverlayEnvironment.h; sourceTree = "<group>"; };
 		4A64A4641120964700D4E22D /* SG3DOverlayEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SG3DOverlayEnvironment.m; sourceTree = "<group>"; };
 		4A64A4651120964700D4E22D /* SGControlEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGControlEvents.h; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 		4A64A4571120964700D4E22D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A64A4581120964700D4E22D /* SGARNavigationViewController.h */,
-				4A64A4591120964700D4E22D /* SGARNavigationViewController.m */,
+				4A64A4581120964700D4E22D /* SGARViewController.h */,
+				4A64A4591120964700D4E22D /* SGARViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,7 +296,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A64A49A1120964700D4E22D /* SGARNavigationViewController.h in Headers */,
+				4A64A49A1120964700D4E22D /* SGARViewController.h in Headers */,
 				4A64A4A31120964700D4E22D /* SG3DOverlayEnvironment.h in Headers */,
 				4A64A4A51120964700D4E22D /* SGControlEvents.h in Headers */,
 				4A64A4A61120964700D4E22D /* SGEnvironmentConstants.h in Headers */,
@@ -362,7 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A64A49B1120964700D4E22D /* SGARNavigationViewController.m in Sources */,
+				4A64A49B1120964700D4E22D /* SGARViewController.m in Sources */,
 				4A64A4A41120964700D4E22D /* SG3DOverlayEnvironment.m in Sources */,
 				4A64A4A71120964700D4E22D /* SGEnvironmentConstants.m in Sources */,
 				4A64A4AF1120964700D4E22D /* SGMath.c in Sources */,

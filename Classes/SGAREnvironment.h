@@ -39,4 +39,4 @@
 #import "SGMovableStack.h"
 #import "SGRadar.h"
 #import "SGARResponder.h"
-#import "SGARNavigationViewController.h"
+#import "SGARViewController.h"
