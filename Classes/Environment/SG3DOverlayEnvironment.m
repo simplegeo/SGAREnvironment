@@ -91,7 +91,7 @@ static GLfloat yEyePosition = kSGMeter * 1.7018f;
         cameraXCoord = 0.0f;
         cameraZCoord = 0.0f;
         cameraStepDistance = 1.0f;
-                
+
         annotationViews = [[NSMutableArray alloc] init];
         containers = [[NSMutableArray alloc] init];
 
@@ -230,7 +230,7 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
     glRotatef(-90.0f * pitch, 1.0f, 0.0f, 0.0f); 
     glRotatef(heading, 0.0f, 1.0f, 0.0f);
     
-    glTranslatef(0.0f, -yEyePosition, 0.0f);        
+    glTranslatef(0.0f, -yEyePosition, 0.0f);
         
     [arView drawComponent:kSGChromeComponent_Gridlines heading:heading roll:roll];
     
