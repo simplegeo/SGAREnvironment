@@ -215,11 +215,7 @@
 
 #if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
     
-    CGFloat toolbarHeight = self.navigationBar.frame.size.height;
-    arView.bounds = CGRectMake(0.0,
-                               toolbarHeight, 
-                               320.0,
-                               480.0 - toolbarHeight * 2.0);
+    arView.bounds = self.view.bounds;
     [self.view addSubview:arView];
     [self.view sendSubviewToBack:arView];
     [arView setNeedsLayout];
@@ -255,11 +251,15 @@
     return YES;
 }
 
+#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+
 - (void) pushViewController:(UIViewController*)viewController animated:(BOOL)animated
 {
     [self setNavigationBarHidden:NO animated:NO];
     [super pushViewController:viewController animated:animated];
 }
+
+#endif
 
 #pragma mark -
 #pragma mark UIBarButtonItem methods 
