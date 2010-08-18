@@ -68,9 +68,8 @@
 @end
 
 @implementation SGARView
-
-@synthesize dataSource, locationManager, movableStack, enableWalking, enableGridLines;
-@dynamic walkingOffset, radar, gridLineColor;
+@synthesize dataSource, locationManager, movableStack, enableWalking, enableGridLines, walkingOffset;
+@dynamic radar, gridLineColor;
 
 - (id) initWithFrame:(CGRect)frame
 {
@@ -135,11 +134,6 @@
     [self addSubview:openGLOverlayView];
 }
 
-
-#pragma mark -
-#pragma mark Accessor methods 
-
-
 #pragma mark -
 #pragma mark UIView overrides 
 
@@ -202,6 +196,13 @@
 #pragma mark -
 #pragma mark Accessor methods 
 
+- (void) setWalkingOffset:(CGPoint)offset
+{
+    walkingOffset = offset;
+    if(radar)
+        radar.walkingOffset = offset;
+}
+
 - (void) setFrame:(CGRect)newFrame
 {
     [super setFrame:newFrame];
@@ -219,6 +220,7 @@
         
         radar = [newRadar retain];
         [radar addAnnotationViews:views];
+        radar.walkingOffset = walkingOffset;
         [self addSubview:radar];
     }
 }
