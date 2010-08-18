@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A2DFDCF121C6F680057290D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2DFDCE121C6F680057290D /* AVFoundation.framework */; };
 		4A476AFB11619D960066F747 /* CLLocationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A476AF911619D960066F747 /* CLLocationAdditions.h */; };
 		4A476AFC11619D960066F747 /* CLLocationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A476AFA11619D960066F747 /* CLLocationAdditions.m */; };
-		4A546CBC121C6A60006465E0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A546CBB121C6A60006465E0 /* AVFoundation.framework */; };
 		4A574C061152C88600794035 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A574C051152C88600794035 /* MapKit.framework */; };
 		4A64A49A1120964700D4E22D /* SGARViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4581120964700D4E22D /* SGARViewController.h */; };
 		4A64A49B1120964700D4E22D /* SGARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4591120964700D4E22D /* SGARViewController.m */; };
@@ -53,9 +53,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A2DFDCE121C6F680057290D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4A476AF911619D960066F747 /* CLLocationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationAdditions.h; sourceTree = "<group>"; };
 		4A476AFA11619D960066F747 /* CLLocationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLocationAdditions.m; sourceTree = "<group>"; };
-		4A546CBB121C6A60006465E0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4A574C051152C88600794035 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4A64A4581120964700D4E22D /* SGARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARViewController.h; sourceTree = "<group>"; };
 		4A64A4591120964700D4E22D /* SGARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGARViewController.m; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				4AEDB7B41121E5F7003C1949 /* QuartzCore.framework in Frameworks */,
 				4AEDB7B61121E5F7003C1949 /* UIKit.framework in Frameworks */,
 				4A574C061152C88600794035 /* MapKit.framework in Frameworks */,
-				4A546CBC121C6A60006465E0 /* AVFoundation.framework in Frameworks */,
+				4A2DFDCF121C6F680057290D /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +168,7 @@
 				4AEDB7AD1121E5F7003C1949 /* CoreGraphics.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 				4A574C051152C88600794035 /* MapKit.framework */,
-				4A546CBB121C6A60006465E0 /* AVFoundation.framework */,
+				4A2DFDCE121C6F680057290D /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -401,21 +401,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Resources/SGAREnvironment_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "SG_DEBUG=1";
-				HEADER_SEARCH_PATHS = SGClient/Headers;
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/SGClient/SGClient-v0.1.8/iphoneos\"",
-					"\"$(SRCROOT)/SGClient/SGClient-v0.1.8/iphonesimulator\"",
-					"\"$(SRCROOT)/SGClient/SGClient-v0.3.0/iphoneos\"",
-					"\"$(SRCROOT)/SGClient/SGClient-v0.3.0/iphonesimulator\"",
-					"\"$(SRCROOT)/SGClient/iphoneos\"",
-					"\"$(SRCROOT)/SGClient/iphonesimulator\"",
-				);
-				OTHER_LDFLAGS = (
-					"\"$(SRCROOT)/SGClient/$(PLATFORM_NAME)\"",
-					"-ObjC",
-				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = SGAREnvironment;
 				SDKROOT = iphoneos4.0;
 			};
@@ -433,8 +422,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "SG_DEBUG=1";
 				HEADER_SEARCH_PATHS = "Classes/**";
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = SGAREnvironment;
 				SDKROOT = iphoneos4.0;
 			};
@@ -450,7 +440,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -463,7 +453,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};

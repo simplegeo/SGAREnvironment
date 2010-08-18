@@ -32,8 +32,6 @@
 //  Created by Derek Smith.
 //
 
-#import <CoreLocation/CoreLocation.h>
-
 /*!
 * @category
 * @abstract Helper methods for CLLocation objects.

@@ -6,6 +6,14 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
     #import <CoreLocation/CoreLocation.h>
+    #import <MapKit/MapKit.h>
+
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
+
+    #import <AVFoundation/AVFoundation.h>
+
+#endif
+
 #endif
 
 #ifdef SG_DEBUG

@@ -59,7 +59,7 @@
 
 - (void) dragStarted:(BOOL)started atPoint:(CGPoint)point;
 
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
 
 - (AVCaptureSession*) defaultCaptureSession;
 
@@ -98,7 +98,7 @@
         
         [self createGraphLines];
         
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
         
         captureSession = nil;
         cameraBackgroundLayer = nil;
@@ -137,7 +137,7 @@
 #pragma mark -
 #pragma mark UIView overrides 
 
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
 
 - (AVCaptureSession*) defaultCaptureSession
 {

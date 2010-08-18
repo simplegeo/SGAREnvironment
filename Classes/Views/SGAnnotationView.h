@@ -32,7 +32,6 @@
 //  Created by Derek Smith.
 //
 
-#import <MapKit/MapKit.h>
 #import "SGTexture.h"
 #import "SGMath.h"
 

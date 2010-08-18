@@ -32,8 +32,6 @@
 //  Created by Derek Smith.
 //
 
-#import <UIKit/UIKit.h>
-
 /*!
 * @class SGHeadingView 
 * @abstract The heading view that is displayed within a @link //simplegeo/ooc/cl/SGRadar SGRadar @/link. 

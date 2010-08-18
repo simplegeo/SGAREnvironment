@@ -32,7 +32,6 @@
 //  Created by Derek Smith.
 //
 
-#import <UIKit/UIKit.h>
 #import "SGAnnotationView.h"
 
 @class SGARView;

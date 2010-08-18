@@ -32,7 +32,6 @@
 //  Created by Derek Smith.
 //
 
-#import <UIKit/UIKit.h>
 #import <OpenGLES/ES1/gl.h>
 
 /*

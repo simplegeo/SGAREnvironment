@@ -32,15 +32,6 @@
 //  Created by Derek Smith.
 //
 
-#import <CoreLocation/CoreLocation.h>
-#import <MapKit/MapKit.h>
-
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
-
-#import <AVFoundation/AVFoundation.h>
-
-#endif
-
 @class SG3DOverlayEnvironment;
 @class SG3DOverlayView;
 
@@ -108,7 +99,7 @@ typedef NSUInteger SGChromeComponent;
  
     NSMutableArray* containers;
     
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
     
     AVCaptureVideoPreviewLayer* cameraBackgroundLayer;
     AVCaptureSession* captureSession;

@@ -34,11 +34,11 @@ do
 done
 
 if [ $1 ]; then
-  VERSION=$1
+  SDK_VERSION=$1
 else
-  VERSION=4.0
+  SDK_VERSION=4.0
 fi
-SDKs=( iphoneos$VERSION iphonesimulator$VERSION )
+SDKs=( iphoneos$SDK_VERSION iphonesimulator$SDK_VERSION )
 
 for sdk in ${SDKs[@]}
 do
@@ -47,7 +47,6 @@ do
       echo "ERROR!"
       exit
   fi
-
 done
 
 # Static Libraries
