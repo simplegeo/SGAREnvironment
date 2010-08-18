@@ -160,6 +160,8 @@ typedef NSInteger SGCardinalDirection;
 */
 @property (nonatomic, retain) NSMutableArray* annotationViews;
 
+@property (nonatomic, assign) CGPoint walkingOffset;
+
 /*!
 * @method addAnnotationViews:
 * @abstract Adds an array of @link //simplegeo/ooc/cl/SGAnnotationView SGAnnotationViews @/link to the radar view.

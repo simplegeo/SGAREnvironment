@@ -49,7 +49,7 @@
 
 @implementation SGRadar
 
-@synthesize rotatable, shouldShowCardinalDirections, annotationViews, cardinalDirectionOffset;
+@synthesize rotatable, shouldShowCardinalDirections, annotationViews, cardinalDirectionOffset, walkingOffset;
 @synthesize currentLocationImageView, radarBackgroundImageView, headingImageView, radarBorderColor, radarCircleColor;
 @dynamic headingColor;
 
@@ -63,6 +63,8 @@
         
         roll = 0.0;
         heading = 0.0;
+        
+        walkingOffset = CGPointZero;
         
         cardinalDirectionOffset = 5.0;
         
