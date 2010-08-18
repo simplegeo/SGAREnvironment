@@ -1,4 +1,4 @@
-SGAREnvironment v0.3.5
+SGAREnvironment v0.3.6
 
 ================================================================================
 ABSTRACT:
@@ -30,6 +30,7 @@ Frameworks
 - CoreGraphics
 - QuartzCore
 - UIKit
+- AVFoundation
 
 ================================================================================
 PACKAGING LIST:
@@ -114,6 +115,9 @@ They aren't very pretty at the moment.
 	
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+Version 0.3.6
+- Added support for iOS4 
+
 Versiom 0.3.5
 - Refactored and polished up some of the code in order to
 move the project into a public repository

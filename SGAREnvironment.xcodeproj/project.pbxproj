@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A476AFB11619D960066F747 /* CLLocationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A476AF911619D960066F747 /* CLLocationAdditions.h */; };
 		4A476AFC11619D960066F747 /* CLLocationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A476AFA11619D960066F747 /* CLLocationAdditions.m */; };
+		4A546CBC121C6A60006465E0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A546CBB121C6A60006465E0 /* AVFoundation.framework */; };
 		4A574C061152C88600794035 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A574C051152C88600794035 /* MapKit.framework */; };
 		4A64A49A1120964700D4E22D /* SGARViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4581120964700D4E22D /* SGARViewController.h */; };
 		4A64A49B1120964700D4E22D /* SGARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4591120964700D4E22D /* SGARViewController.m */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		4A476AF911619D960066F747 /* CLLocationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationAdditions.h; sourceTree = "<group>"; };
 		4A476AFA11619D960066F747 /* CLLocationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLocationAdditions.m; sourceTree = "<group>"; };
+		4A546CBB121C6A60006465E0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4A574C051152C88600794035 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4A64A4581120964700D4E22D /* SGARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGARViewController.h; sourceTree = "<group>"; };
 		4A64A4591120964700D4E22D /* SGARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGARViewController.m; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				4AEDB7B41121E5F7003C1949 /* QuartzCore.framework in Frameworks */,
 				4AEDB7B61121E5F7003C1949 /* UIKit.framework in Frameworks */,
 				4A574C061152C88600794035 /* MapKit.framework in Frameworks */,
+				4A546CBC121C6A60006465E0 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +168,7 @@
 				4AEDB7AD1121E5F7003C1949 /* CoreGraphics.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 				4A574C051152C88600794035 /* MapKit.framework */,
+				4A546CBB121C6A60006465E0 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
