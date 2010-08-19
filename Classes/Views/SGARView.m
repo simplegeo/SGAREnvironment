@@ -281,9 +281,9 @@
     return [UIColor colorWithRed:gridLineColorComponents[0] green:gridLineColorComponents[1] 
                             blue:gridLineColorComponents[2] alpha:gridLineColorComponents[3]];
 }
- 
-- (void) reloadData
-{       
+
+- (void) reloadDataForLocation:(CLLocation*)location
+{
     [self empty];
     
     // Make every view resuseable and place them in the proper bucket
@@ -306,17 +306,15 @@
     
     // Empty out all of the subviews that were recycled
     [overlaySubviews removeAllObjects];
-
+    
     // Get the amount of annotations to display
-    NSArray* annotations = [dataSource arView:self annotationsAtLocation:enviornmentDrawer.locationManager.location];
+    NSArray* annotations = [dataSource arView:self annotationsAtLocation:location];
     
     if(annotations && [annotations count]) {
-     
         int amountOfAnnotations = [annotations count];
         SGAnnotationView* overlaySubview;
         id<MKAnnotation> annotation = nil;
         for(int i = 0; i < amountOfAnnotations; i++) {
-        
             annotation = [annotations objectAtIndex:i];
             overlaySubview = [dataSource arView:self viewForAnnotation:annotation];
             
@@ -333,10 +331,15 @@
     if([overlaySubviews count]) {
         
         [enviornmentDrawer addAnnotationViews:overlaySubviews];
-    
+        
         if([dataSource respondsToSelector:@selector(arView:didAddAnnotationViews:)])
             [dataSource arView:self didAddAnnotationViews:overlaySubviews];
-    }
+    }    
+}
+
+- (void) reloadData
+{
+    [self reloadDataForLocation:enviornmentDrawer.locationManager.location];
 }
 
 - (void) clear

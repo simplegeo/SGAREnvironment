@@ -185,11 +185,22 @@ typedef NSUInteger SGChromeComponent;
 
 /*!
 * @method reloadData
-* @abstract ￼ Removes all annotation views from the envoirnment and loads in a new data set from @link dataSource dataSource @/link.
-* @discussion Once reloadData is called, all annotaiton views are sent @link //simplegeo/ooc/instm/SGAnnotationView/prepareForReuse prepareForReuses @/link.
+* @abstract ￼ Removes all annotation views from the envoirnment and loads in a new data set from @link dataSource dataSource @/link
+* using the devices current location.
+* @discussion Once reloadData is called, all annotaiton views are sent @link //simplegeo/ooc/instm/SGAnnotationView/prepareForReuse prepareForReuse @/link.
 * The views are then awaiting to be dequeue and resused.
 */
 - (void) reloadData;
+
+/*!
+* @method reloadData
+* @abstract ￼ Removes all annotation views from the envoirnment and loads in a new data set from @link dataSource dataSource @/link
+* using the location passed in.
+* @discussion Once reloadData is called, all annotaiton views are sent @link //simplegeo/ooc/instm/SGAnnotationView/prepareForReuse prepareForReuse @/link.
+* The views are then awaiting to be dequeue and resused.
+* @param location The location to load data for.
+*/
+- (void) reloadDataForLocation:(CLLocation*)location;
 
 /*!
 * @method startAnimation
