@@ -461,8 +461,6 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
         id<MKAnnotation> annotation;
         for(SGAnnotationView* annotationView in annotationViews) {
             annotation = annotationView.annotation;
-            annotation.coordinate;
-
             if(annotation && !annotationView.isCaptured) {                
                 bearing = (double)[currentLocation getBearingFromCoordinate:annotation.coordinate];
                 distance = [self getAnnotationViewDistance:annotationView];
