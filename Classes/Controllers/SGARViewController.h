@@ -202,33 +202,33 @@
 *
 * When creating your SGAnnotationViews, it is not required to set the @link //simplegeo/ooc/instp/SGAnnotationView/annotation annotation @/link property.
 * The @link arView arView @/link will assign the passed in annotation to the view if the view does not come assigned with an annotation.
-* @param nvc The @link SGARNavigationViewContorller SGARViewController @/link that requires a new view.
+* @param viewController The @link SGARNavigationViewContorller SGARViewController @/link that requires a new view.
 * @param annotation ￼The @link SGAnnotation SGAnnotation @/link that needs a view.
 * @param bucketIndex ￼The index of the bucket that is currently being loaded into the AR view.
 * @result ￼ The @link //simplegeo/ooc/cl/SGAnnotationView SGAnnotationView @/link to be used
 * with the @link //simplegeo/ooc/intf/SGRecordAnnotation SGRecordAnnotation @/link. If nil is returned,
 * then no annotation view will be displayed for the annotation.
 */
-- (SGAnnotationView*) viewController:(SGARViewController*)nvc
+- (SGAnnotationView*) viewController:(SGARViewController*)viewController
                    viewForAnnotation:(id<MKAnnotation>)annotation 
                        atBucketIndex:(NSInteger)bucketIndex;
 
 /*!
 * @method viewController:annotationsForBucketAtIndex:
 * @abstract Asks for all the annotations that will be placed in the bucket.
-* @param nvc ￼The @link SGARViewController SGARViewController @/link that needs a bucket to be filled.
+* @param viewController ￼The @link SGARViewController SGARViewController @/link that needs a bucket to be filled.
 * @param bucketIndex ￼The index of the bucket to be filled.
 * @result ￼ An array of @link //simplegeo/ooc/cl/SGRecordAnnotation SGRecordAnnotations @/link that will be placed in the bucket.
 */
-- (NSArray*) viewController:(SGARViewController*)nvc annotationsForBucketAtIndex:(NSInteger)bucketIndex;
+- (NSArray*) viewController:(SGARViewController*)viewController annotationsForBucketAtIndex:(NSInteger)bucketIndex;
 
 /*!
 * @method viewControllerNumberOfBuckets:
 * @abstract ￼The number of buckets to create.
-* @param nvc ￼The @link SGARViewController SGARViewController @/link that is asking for the amount of buckets.
+* @param viewController ￼The @link SGARViewController SGARViewController @/link that is asking for the amount of buckets.
 * @result ￼The number of buckets the to create.
 */
-- (NSInteger) viewControllerNumberOfBuckets:(SGARViewController*)nvc;
+- (NSInteger) viewControllerNumberOfBuckets:(SGARViewController*)viewController;
 
 @optional
 
@@ -236,10 +236,10 @@
 * @method viewController:didAddAnnotationsViews:
 * @abstract ￼Notifies the delegate when @link //simplegeo/ooc/cl/SGAnnotationView SGAnnotationViews @/link have been
 * added to the @link //simplegeo/ooc/cl/SGARView SGARView @/link.
-* @param nvc ￼The @link SGARViewController SGARViewController @/link that has added the views to the @link arView arView @/link.
+* @param viewController ￼The @link SGARViewController SGARViewController @/link that has added the views to the @link arView arView @/link.
 * @param annotationViews ￼The annotation views that were added.
 */
-- (void) viewController:(SGARViewController*)nvc didAddAnnotationsViews:(NSArray*)annotationViews;
+- (void) viewController:(SGARViewController*)viewController didAddAnnotationsViews:(NSArray*)annotationViews;
 
 @end
 
