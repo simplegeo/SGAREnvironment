@@ -229,8 +229,7 @@
     NSInteger numberOfTouches = [allTouches count];
     NSInteger tapCount = 0;
     
-    if(numberOfTouches == 1) {
-        
+    if(numberOfTouches == 1) {     
         UITouch* touchOne = [[allTouches allObjects] objectAtIndex:0];
         tapCount = [touchOne tapCount];
         
