@@ -32,6 +32,12 @@
 //  Created by Derek Smith.
 //
 
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
+
+#import <AVFoundation/AVFoundation.h>
+
+#endif
+
 @class SG3DOverlayEnvironment;
 @class SG3DOverlayView;
 
@@ -271,7 +277,7 @@ typedef NSUInteger SGChromeComponent;
 - (BOOL) hitTestAtPoint:(CGPoint)point withEvent:(SGControlEvent)event;
 - (void) empty;
 
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
 
 - (void) startCaptureSession;
 - (void) stopCaptureSession;
