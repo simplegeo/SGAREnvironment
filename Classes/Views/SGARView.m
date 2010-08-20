@@ -89,7 +89,7 @@
         
         touchPoint = CGPointZero;
         
-        [self setRadar:[[[SGRadar alloc] initWithFrame:CGRectMake(30.0, 90.0, 100.0, 100.0)] autorelease]];
+        [self setRadar:[[[SGRadar alloc] initWithFrame:CGRectMake(10.0, 10.0, 100.0, 100.0)] autorelease]];
         
         containers = [[NSMutableArray alloc] init];
         
@@ -119,7 +119,7 @@
 - (void) setUpOverlayView
 {   
 
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
     
     [self startCaptureSession];
     
@@ -148,7 +148,7 @@
     if(videoInput)
         [session addInput:videoInput];
     else
-        SGLog([error description]);
+        SGLog(@"%@", [error description]);
 
     return session;
 }
