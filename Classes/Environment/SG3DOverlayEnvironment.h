@@ -80,8 +80,6 @@
     NSMutableArray* annotationViews;
     NSMutableArray* containers;
     
-    UIView* inspectedView;
-    
     SGAnnotationView* selectedView;
     
     CGFloat cameraXCoord;

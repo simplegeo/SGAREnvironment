@@ -94,8 +94,6 @@ static GLfloat yEyePosition = kSGMeter * 1.7018f;
 
         annotationViews = [[NSMutableArray alloc] init];
         containers = [[NSMutableArray alloc] init];
-
-        inspectedView = nil;
                 
         modelMatrix = (GLfloat*)malloc(sizeof(GLfloat) * 16);
         projectionMatrix = (GLfloat*)malloc(sizeof(GLfloat) * 16);
@@ -116,9 +114,9 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
     double d2 = v2.distance;
     
 	NSComparisonResult result;
-	if(d1 > d2)
+	if(d2 > d1)
 		result = NSOrderedDescending;
-	else if(d2 > d1)
+	else if(d1 > d2)
 		result = NSOrderedAscending;
     else 
         result = NSOrderedSame;
@@ -145,31 +143,12 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 
 - (void) addAnnotationView:(SGAnnotationView*)annotationView
 {
-    [annotationView.closeButton addTarget:self action:@selector(closeAnnotationView:) forControlEvents:UIControlEventTouchUpInside];
     [annotationViews addObject:annotationView];
 }
 
 - (void) removeLocatableObject:(SGAnnotationView*)annotationView
 {
-    [annotationView.closeButton removeTarget:self action:@selector(closeAnnotationView:) forControlEvents:UIControlEventTouchUpInside];
     [annotationViews removeObject:annotationView];
-}
-
-- (void) closeAnnotationView:(id)button
-{
-    BOOL closeView = YES;
-    if(inspectedView) {
-        if([inspectedView isKindOfClass:[SGAnnotationView class]]) {
-            SGAnnotationView* view = (SGAnnotationView*)inspectedView;
-            if(view.delegate && [view.delegate respondsToSelector:@selector(shouldCloseAnnotationView:)])
-                closeView = [view.delegate shouldCloseAnnotationView:view];
-        }
-    }
-        
-    if(closeView) {
-        [inspectedView removeFromSuperview];
-        inspectedView = nil;           
-    }
 }
 
 #pragma mark -
@@ -253,27 +232,19 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 {
     SGLog(@"SGGesture - Single tap at %f,%f", point.x, point.y);
     
+    UIView* inspectedView = nil;
     // Chrome manager gets first dibs on touch events
     if(![arView hitTestAtPoint:point withEvent:kSGControlEvent_Touch]) {
         if(!inspectedView) {
             SGAnnotationView* closestView = [self closestAnnotationViewForPoint:point];
             if(closestView && closestView.distance <= kSGSphere_Radius) {
                 selectedView = closestView;
-                selectedView.isSelected = YES;
-            
                 if(closestView.delegate && [closestView.delegate respondsToSelector:@selector(shouldInspectAnnotationView:)]) {
                     UIView* viewToInspect = [closestView.delegate shouldInspectAnnotationView:closestView];
-                
                     if(viewToInspect) {
                         if([viewToInspect isKindOfClass:[SGAnnotationView class]]) {
                             viewToInspect.hidden = NO;
-                            [(SGAnnotationView*)viewToInspect inspectView:YES];
                             ((SGAnnotationView*)viewToInspect).isCaptured = YES;
-                        
-                            viewToInspect.frame = CGRectMake((arView.frame.size.width - viewToInspect.frame.size.width) / 2.0,
-                                                       (arView.frame.size.height - viewToInspect.frame.size.height) / 2.0,
-                                                       viewToInspect.frame.size.width,
-                                                         viewToInspect.frame.size.height);
                         } 
                     
                         [arView addSubview:viewToInspect];
@@ -310,10 +281,9 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
     SGLog(@"SGGesture - Tap released at %f,%f", point.x, point.y);
     
     if(![arView hitTestAtPoint:point withEvent:kSGControlEvent_TouchEnded]) {
-        if(selectedView) {
-            selectedView.isSelected = NO;
+        if(selectedView)
             selectedView = nil;
-        }
+
         for(id<SGARResponder>responder in responders)
             if([responder respondsToSelector:@selector(ARTapEndedAtPoint:)])
                 [responder ARTapEndedAtPoint:point];
@@ -674,9 +644,6 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
     [currentLocation release];
     [annotationViews release];
     [containers release];
-
-    if(inspectedView)
-        [inspectedView release];
         
     [super dealloc];
 }
