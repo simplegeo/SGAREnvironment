@@ -69,6 +69,7 @@
 {
     arView = [[SGARView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0)];
     arView.dataSource = self;
+    arView.radar.frame = CGRectMake(20.0, 64.0, 100.0, 100.0);
 
 #if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
 
@@ -214,8 +215,7 @@
     self.view.backgroundColor = [UIColor clearColor];
 
 #if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
-    
-    arView.bounds = self.view.bounds;
+
     [self.view addSubview:arView];
     [self.view sendSubviewToBack:arView];
     [arView setNeedsLayout];
@@ -230,6 +230,12 @@
 
 #endif
 
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    arView.frame = self.view.bounds;
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -248,7 +254,7 @@
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+    return NO;
 }
 
 #if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
