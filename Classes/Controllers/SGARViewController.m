@@ -34,6 +34,8 @@
 
 #import "SGARViewController.h"
 #import "SGMovableStack.h"
+#import "SGARView.h"
+#import "SGRadar.h"
 
 @interface SGARViewController (Private)
 
