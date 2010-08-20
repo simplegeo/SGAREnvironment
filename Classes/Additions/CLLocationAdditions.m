@@ -64,8 +64,16 @@
 
 - (double) distanceToLocation:(CLLocation*)location
 {
-    double distance = [self getDistanceFrom:location];
+    double distance;
+#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
     
+    distance = [self distanceFromLocation:location];
+    
+#else
+    
+    distance = [self getDistanceFrom:location];
+    
+#endif
     return distance;
 }
 
