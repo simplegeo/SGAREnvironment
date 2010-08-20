@@ -35,54 +35,6 @@
 #import "SGTexture.h"
 #import "SGMath.h"
 
-/*!
-* @enum Inspector Styles
-* @abstract ￼The style of the view when it is being inspected.
-* @discussion ￼The default style is kSGAnnotationViewInspectorType_Standard.
-* @constant ￼kSGAnnotationViewInspectorType_None When inspected, nothing will show.
-* @constant ￼kSGAnnotationViewInspectorType_Standard Displays a title, date, and the target image.
-* @constant ￼kSGAnnotationViewInspectorType_Message Displays a title, date, message, and the target image.
-* @constant ￼kSGAnnotationViewInspectorType_Photo Displays a title, date, message, photo, and the target image.
-* @constant ￼kSGAnnotationViewInspectorType_Custom Displays the current layout of the view.
-*/
-enum SGAnnotationViewInspectorType {
-    
-    kSGAnnotationViewInspectorType_None = 0,
-    kSGAnnotationViewInspectorType_Standard,
-    kSGAnnotationViewInspectorType_Message,
-    kSGAnnotationViewInspectorType_Photo,
-    kSGAnnotationViewInspectorType_Custom
-    
-};
-
-typedef NSInteger SGAnnotationViewInspectorType;
-
-/*!
-* @enum Target Styles
-* @abstract The style of the view when it is loaded in the @link SGARView SGARView @/link.
-* @discussion ￼The default style is kSGAnnotationViewTargetType_Pin.
-* @constant ￼kSGAnnotationViewTargetType_Pin Displays a pin that resemebles the pin from MKPinAnnotationView.
-* @constant ￼kSGAnnotationViewTargetType_Glass Displays the Target image over a glassy, pointed square.
-* @constant kSGAnnotationViewTargetType_Custom Displays the current layout of the view.
-*/
-enum SGAnnotationViewTargetType {
- 
-    kSGAnnotationViewTargetType_Pin = 0,
-    kSGAnnotationViewTargetType_Glass,
-    kSGAnnotationViewTargetType_Custom
-    
-};
-
-typedef NSInteger SGAnnotationViewTargetType;
-
-enum SGPinColor {
- 
-    kSGPinColor_Red,
-    kSGPinColor_Blue
-};
-
-typedef NSInteger SGPinColor;
-
 @protocol SGAnnotationViewDelegate;
 
 /*!
@@ -107,18 +59,7 @@ typedef NSInteger SGPinColor;
     
     NSString* reuseIdentifier;
     
-    SGAnnotationViewInspectorType inspectorType;
-    SGAnnotationViewTargetType targetType;
-    
-    UILabel* detailedLabel;
-    UILabel* titleLabel;
-    UILabel* messageLabel;
-    
     UIImageView* targetImageView;
-    UIImageView* photoImageView;
-    
-    UIButton* closeButton;
-
     id<SGAnnotationViewDelegate> delegate;
     
     double bearing;
@@ -127,22 +68,14 @@ typedef NSInteger SGPinColor;
     
     // This should probably be a bit-mask.
     BOOL enableOpenGL;
-    BOOL isBeingInspected;
     BOOL isCapturable;    
     BOOL isCaptured;
     BOOL isSelected;    
     
-    SGPinColor pinColor;
     UIButton* radarTargetButton;
-    
     UIImage* containerImage;
         
-    @private
-    UIImageView* backgroundImageView;
-    UIImageView* topExpandedBGImageView;
-    UIImageView* middleExpandedBGImageView;
-    UIImageView* bottomExpandedBGImageView;
-    
+    @private    
     SGPoint3* point;
     SGTexture* texture;
     SGTexture* radarPointTexture;
@@ -161,66 +94,6 @@ typedef NSInteger SGPinColor;
 * @abstract Use this identifier to dequeue unused annotation views from @link //simplegeo/ooc/cl/SGARView SGARView @/link.
 */
 @property (nonatomic, readonly) NSString* reuseIdentifier;
-
-/*!
-* @property
-* @abstract The style of the view when it is being inspected.
-*/
-@property (nonatomic, assign) SGAnnotationViewInspectorType inspectorType;
-
-/*!
-* @property
-* @abstract The style of the view when it is not being inspected.
-*/
-@property (nonatomic, assign) SGAnnotationViewTargetType targetType;
-
-/*!
-* @property
-* @abstract A detailed label that is used when @link inspectorType inspectorType @/link is not
-* @link kSGAnnotationViewInspectorType_Custom kSGAnnotationViewInspectoryType_Custom @/link and
-* the view is in inspect mode.
-*/
-@property (nonatomic, retain, readonly) UILabel* detailedLabel;
-
-/*! 
-* @property
-* @abstract A title label that is used when @link inspectoryType inspectorType @/link is not
-* in @link kSGAnnotationViewInspectorType_Custom kSGAnnotationViewInspectorType_Custom @/link and
-* the view is in inspect mode.
-*/
-@property (nonatomic, retain, readonly) UILabel* titleLabel;
-
-/*!
-* @property
-* @abstract A title label that is used when @link inspectoryType inspectorType @/link is not
-* in @link kSGAnnotationViewInspectorType_Custom kSGAnnotationViewInspectorType_Custom @/link and
-* the view is in inspect mode.
-*/
-@property (nonatomic, retain, readonly) UILabel* messageLabel;
-
-/*!
-* @property
-* @abstract A title label that is used when @link inspectoryType inspectorType @/link is not
-* in @link kSGAnnotationViewInspectorType_Custom kSGAnnotationViewInspectorType_Custom @/link and
-* the view is in inspect mode.
-*/
-@property (nonatomic, retain, readonly) UIImageView* photoImageView;
-
-/*!
-* @property
-* @abstract A close button that is used when @link inspectoryType inspectorType @/link is not
-* in @link kSGAnnotationViewInspectorType_Custom kSGAnnotationViewInspectorType_Custom @/link and
-* the view is in inspect mode.
-* @discussion The default position is in the upper left-hand corner of the view.
-*/
-@property (nonatomic, retain, readonly) UIButton* closeButton;
-
-/*!
-* @property
-* @abstract The pin color to use when the view is in target mode and @link targetType targetType @/link is set
-* @link kSGAnnotationViewTargetType_Pin kSGAnnotationViewTargetType_Pin @/link. The default is @link kSGPinColor_Red kSGPinColor_Red @/link.
-*/
-@property (nonatomic, assign) SGPinColor pinColor;
 
 /*!
 * @property
@@ -270,12 +143,6 @@ typedef NSInteger SGPinColor;
 
 /*!
 * @property
-* @abstract If YES, the the view is in inspect mode. Otherwise; NO.
-*/
-@property (nonatomic, readonly) BOOL isBeingInspected;
-
-/*!
-* @property
 * @abstract If YES, the view can be added to the @link //simplegeo/ooc/cl/SGMovableStack SGMovableStack @/link. Otherwise, NO.
 */
 @property (nonatomic, assign) BOOL isCapturable;
@@ -286,13 +153,6 @@ typedef NSInteger SGPinColor;
 * a @link //simplegeo/ooc/cl/SGAnnotationViewContainer SGAnnotationViewContainer @/link. Otherwise, NO.
 */
 @property (nonatomic, assign) BOOL isCaptured;
-
-/*!
-* @property
-* @abstract If YES, the view is in a selected state which was either set a UITouchEvent or explicity through
-* the setter. Otherwise, NO.
-*/
-@property (nonatomic, assign) BOOL isSelected;
 
 /*!
 * @property
@@ -327,13 +187,13 @@ typedef NSInteger SGPinColor;
 @property (nonatomic, retain) UIImage* containerImage;
 
 /*!
-* @method initAtPoint:reuseIdentifier:
+* @method initWithFrame:reuseIdentifier:
 * @abstract Initialize a new annotation view.
-* @param pt The origin of the view when it is not being drawn in the AR enviornment.
+* @param frame The frame of the view.
 * @param identifier ￼The identifier for the view.
 * @result A new instance of SGAnnotationView.
 */
-- (id) initAtPoint:(CGPoint)pt reuseIdentifier:(NSString*)identifier;
+- (id) initWithFrame:(CGRect)frame reuseIdentifier:(NSString*)identifier;
 
 /*!
 * @method prepareForReuse
@@ -342,31 +202,6 @@ typedef NSInteger SGPinColor;
 * and use it to put the view in a specific state.
 */
 - (void) prepareForReuse;
-
-
-/*!
-* @method inspectView:
-* @abstract Changes the inspection type of the view.
-* @param inspect ￼YES will put the view in inspect mode. NO wil put the view in target mode.
-*/
-- (void) inspectView:(BOOL)inspect;
-
-/*!
-* @method close
-* @abstract Only works in inspector mode. Returns the view back to target mode.
-* @discussion ￼If the annotation view is a subview of the AR view, it will @link //apple_ref/ooc/instm/UIView/removeFromSuperview: removeFromSuperview: @/link
-* and call @link inspectView: inspectView: @/link with NO. The annotation view should then return back to target mode join back with
-* its brothers.
-*/
-//- (void) close;
-
-/*!
-* @method setContainerImage:
-* @abstract ￼The UIImage that will be displayed when this view is added to an instance of @link //simplegeo/ooc/cl/SGAnnotationViewContainer SGAnnotationViewContainer @/link.
-* The default image is the UIImage representation of the current layout of the annotaiton view.
-* @param image ￼
-*/
-- (void) setContainerImage:(UIImage*)image;
 
 /*!
 * @method drawAnnotationView
@@ -402,16 +237,5 @@ typedef NSInteger SGPinColor;
 * @result Any UIView if the view should enter into inspection mode; otherwise NO.
 */
 - (UIView*) shouldInspectAnnotationView:(SGAnnotationView*)view;
-
-/*!
-* @method shouldCloseAnnotationView:
-* @abstract ￼Asks the delegate whether the annotation view should be removed as a subview of @link //simplegeo/ooc/cl/SGARView SGARView @/link and place
-* back in the AR enviornment.
-* and enter back into identifier mode.
-* @discussion See @link //simplegeo/ooc/instp/SGAnnotationView/closeButton SGAnnotationView @/link
-* @param view ￼The view that is in question.
-* @result YES if the view should leave return back to the AR enviornment; otherwise NO.
-*/
-- (BOOL) shouldCloseAnnotationView:(SGAnnotationView*)view;
 
 @end

@@ -39,6 +39,8 @@
 		4A64A4C11120964700D4E22D /* SGRadar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4831120964700D4E22D /* SGRadar.h */; };
 		4A64A4C21120964700D4E22D /* SGRadar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4841120964700D4E22D /* SGRadar.m */; };
 		4A64A4C31120964700D4E22D /* SGAREnvironment_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4971120964700D4E22D /* SGAREnvironment_Prefix.pch */; };
+		4A705A73121CD95800B3D330 /* SGPinAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A705A71121CD95800B3D330 /* SGPinAnnotationView.h */; };
+		4A705A74121CD95800B3D330 /* SGPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A705A72121CD95800B3D330 /* SGPinAnnotationView.m */; };
 		4A722F5F1198BFF80078ABCE /* GLU+iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A722F5D1198BFF80078ABCE /* GLU+iPhone.h */; };
 		4A722F601198BFF80078ABCE /* GLU+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A722F5E1198BFF80078ABCE /* GLU+iPhone.m */; };
 		4A722FAB1198C3B50078ABCE /* AccelerometerFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A722FA91198C3B50078ABCE /* AccelerometerFilter.h */; };
@@ -101,6 +103,8 @@
 		4A64A4951120964700D4E22D /* SGRedPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGRedPin.png; sourceTree = "<group>"; };
 		4A64A4961120964700D4E22D /* SGTopInspectorBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGTopInspectorBackground.png; sourceTree = "<group>"; };
 		4A64A4971120964700D4E22D /* SGAREnvironment_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAREnvironment_Prefix.pch; sourceTree = "<group>"; };
+		4A705A71121CD95800B3D330 /* SGPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPinAnnotationView.h; sourceTree = "<group>"; };
+		4A705A72121CD95800B3D330 /* SGPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPinAnnotationView.m; sourceTree = "<group>"; };
 		4A722F5D1198BFF80078ABCE /* GLU+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLU+iPhone.h"; sourceTree = "<group>"; };
 		4A722F5E1198BFF80078ABCE /* GLU+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GLU+iPhone.m"; sourceTree = "<group>"; };
 		4A722FA91198C3B50078ABCE /* AccelerometerFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerFilter.h; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				4A64A4821120964700D4E22D /* SGMovableStack.m */,
 				4A64A4831120964700D4E22D /* SGRadar.h */,
 				4A64A4841120964700D4E22D /* SGRadar.m */,
+				4A705A71121CD95800B3D330 /* SGPinAnnotationView.h */,
+				4A705A72121CD95800B3D330 /* SGPinAnnotationView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				4A476AFB11619D960066F747 /* CLLocationAdditions.h in Headers */,
 				4A722F5F1198BFF80078ABCE /* GLU+iPhone.h in Headers */,
 				4A722FAB1198C3B50078ABCE /* AccelerometerFilter.h in Headers */,
+				4A705A73121CD95800B3D330 /* SGPinAnnotationView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +388,7 @@
 				4A476AFC11619D960066F747 /* CLLocationAdditions.m in Sources */,
 				4A722F601198BFF80078ABCE /* GLU+iPhone.m in Sources */,
 				4A722FAC1198C3B50078ABCE /* AccelerometerFilter.m in Sources */,
+				4A705A74121CD95800B3D330 /* SGPinAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
