@@ -158,6 +158,11 @@ typedef NSInteger SGCardinalDirection;
 */
 @property (nonatomic, retain) NSMutableArray* annotationViews;
 
+
+/*!
+* @property ￼
+* @abstract
+*/
 @property (nonatomic, assign) CGPoint walkingOffset;
 
 /*!

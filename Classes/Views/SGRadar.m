@@ -189,14 +189,7 @@
                                                 0.0,
                                                 boundsWidth,
                                                 boundsHeight);
-    
-    headingView.transform = CGAffineTransformIdentity;
-    
-    headingImageView.frame = CGRectMake((headingView.frame.size.width - headingImageView.frame.size.width) / 2.0,
-                                        0.0,
-                                        headingImageView.image.size.width,
-                                        headingImageView.image.size.height);    
-    
+        
     // Current position
     currentLocationImageView.frame = CGRectMake((boundsWidth - currentLocationImageView.frame.size.width) / 2.0,
                                                 (boundsHeight - currentLocationImageView.frame.size.height) / 2.0,
@@ -204,8 +197,12 @@
                                                 currentLocationImageView.frame.size.height);    
     
     [super setFrame:newFrame];
-    
     headingView.frame = self.bounds;
+    headingView.transform = CGAffineTransformIdentity;
+    headingImageView.frame = CGRectMake((headingView.frame.size.width - headingImageView.frame.size.width) / 2.0,
+                                        0.0,
+                                        headingImageView.image.size.width,
+                                        headingImageView.image.size.height);    
 }
 
 
@@ -215,12 +212,10 @@
 - (void) layoutSubviews
 {    
     [super layoutSubviews];
-    
     CGFloat boundsWidth = self.bounds.size.width;
     CGFloat boundsHeight = self.bounds.size.height;
         
     CGFloat scale = (self.frame.size.width / 2.0) / kSGSphere_Radius;
-    
     CGRect radarBounds = CGRectInset(self.bounds, -5.0, -5.0);
         
     // Annotaiton Views
@@ -308,7 +303,6 @@
 {
     heading = newHeading;
     roll = newRoll;
-
     [self setNeedsLayout];    
 }
 
