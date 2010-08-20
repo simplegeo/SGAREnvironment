@@ -48,7 +48,6 @@
 @end
 
 @implementation SGAnnotationViewContainer
-
 @synthesize highlightedImage, arView;
 @dynamic normalImage;
 
