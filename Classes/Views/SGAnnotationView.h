@@ -87,7 +87,7 @@
 * @property
 * @abstract The source of the view's location in the AR enviornment.
 */
-@property (nonatomic, assign) id<MKAnnotation> annotation;
+@property (nonatomic, retain) id<MKAnnotation> annotation;
 
 /*!
 * @property
