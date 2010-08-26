@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A022F601226200E0063BCED /* SGGlassAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */; };
+		4A022F611226200E0063BCED /* SGGlassAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A022F5F1226200E0063BCED /* SGGlassAnnotationView.h */; };
 		4A2DFDCF121C6F680057290D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2DFDCE121C6F680057290D /* AVFoundation.framework */; };
 		4A476AFB11619D960066F747 /* CLLocationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A476AF911619D960066F747 /* CLLocationAdditions.h */; };
 		4A476AFC11619D960066F747 /* CLLocationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A476AFA11619D960066F747 /* CLLocationAdditions.m */; };
@@ -55,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGlassAnnotationView.m; sourceTree = "<group>"; };
+		4A022F5F1226200E0063BCED /* SGGlassAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGlassAnnotationView.h; sourceTree = "<group>"; };
 		4A2DFDCE121C6F680057290D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4A476AF911619D960066F747 /* CLLocationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationAdditions.h; sourceTree = "<group>"; };
 		4A476AFA11619D960066F747 /* CLLocationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLocationAdditions.m; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 		4A64A4751120964700D4E22D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */,
+				4A022F5F1226200E0063BCED /* SGGlassAnnotationView.h */,
 				4A64A4761120964700D4E22D /* SG3DOverlayView.h */,
 				4A64A4771120964700D4E22D /* SG3DOverlayView.m */,
 				4A64A4781120964700D4E22D /* SGAnnotationView.h */,
@@ -327,6 +333,7 @@
 				4A722F5F1198BFF80078ABCE /* GLU+iPhone.h in Headers */,
 				4A722FAB1198C3B50078ABCE /* AccelerometerFilter.h in Headers */,
 				4A705A73121CD95800B3D330 /* SGPinAnnotationView.h in Headers */,
+				4A022F611226200E0063BCED /* SGGlassAnnotationView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +396,7 @@
 				4A722F601198BFF80078ABCE /* GLU+iPhone.m in Sources */,
 				4A722FAC1198C3B50078ABCE /* AccelerometerFilter.m in Sources */,
 				4A705A74121CD95800B3D330 /* SGPinAnnotationView.m in Sources */,
+				4A022F601226200E0063BCED /* SGGlassAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
