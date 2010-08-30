@@ -127,7 +127,7 @@
 
 - (NSArray*) getRecordAnnotationViews
 {
-    return views;
+    return [NSArray arrayWithArray:views];
 }
 
 - (NSArray*) getRecordAnnotations
