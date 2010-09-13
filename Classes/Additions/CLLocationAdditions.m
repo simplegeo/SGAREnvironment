@@ -55,10 +55,10 @@
     CLLocationCoordinate2D first = self.coordinate;
     CLLocationCoordinate2D second = coord;
     
-    double deltaLong = first.longitude - second.longitude;
+    double deltaLong = second.longitude - first.longitude;
     
     // θ = atan2(sin(Δlong).cos(lat2), cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong)) 
-    double b = atan2(sin(deltaLong) * cos(second.latitude), cos(first.latitude) * sin(second.latitude) - sin(first.latitude) * cos(second.latitude) * cos(deltaLong)); 
+    double b = atan2(cos(first.latitude)*sin(second.latitude)-sin(first.latitude)*cos(second.latitude)*cos(deltaLong), sin(deltaLong)*cos(second.latitude)); 
     return (b * 180.0 / M_PI);
 }
 
