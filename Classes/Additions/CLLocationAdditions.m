@@ -52,14 +52,15 @@
 
 - (double) getBearingFromCoordinate:(CLLocationCoordinate2D)coord
 {
-    CLLocationCoordinate2D first = self.coordinate;
-    CLLocationCoordinate2D second = coord;
+    float firstLat = DEGREES_TO_RADIANS(self.coordinate.latitude);
+    float firstLon = DEGREES_TO_RADIANS(self.coordinate.longitude);
+    float secondLat = DEGREES_TO_RADIANS(coord.latitude);
+    float secondLon = DEGREES_TO_RADIANS(coord.longitude);
     
-    double deltaLong = second.longitude - first.longitude;
-    
-    // θ = atan2(sin(Δlong).cos(lat2), cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong)) 
-    double b = atan2(cos(first.latitude)*sin(second.latitude)-sin(first.latitude)*cos(second.latitude)*cos(deltaLong), sin(deltaLong)*cos(second.latitude)); 
-    return (b * 180.0 / M_PI);
+    double deltaLong = secondLon - firstLon;
+    double b = atan2(sin(deltaLong)*cos(secondLat),cos(firstLat)*sin(secondLat)-sin(firstLat)*cos(secondLat)*cos(deltaLong)); 
+    b = RADIANS_TO_DEGREES(b);
+    return b < 0 ? b + 360.0 : b;
 }
 
 - (double) distanceToLocation:(CLLocation*)location

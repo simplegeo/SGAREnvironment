@@ -226,15 +226,15 @@
         targetButton = view.radarTargetButton;
         
         if(!view.isCaptured) {
-            bearing = view.bearing;
+            bearing = view.bearing - 90.0;
         
             // The distance that we have here is not the distance
             // calculation that we want. We need to scale it down.
             distance = view.distance * scale;
         
-            origin.x = distance * sin(DEGREES_TO_RADIANS(bearing)) + (boundsWidth / 2.0);
-            origin.y = -distance * cos(DEGREES_TO_RADIANS(bearing)) + (boundsHeight / 2.0);
-            
+            origin.x = distance * cos(DEGREES_TO_RADIANS(bearing)) + (boundsWidth / 2.0);
+            origin.y = distance * sin(DEGREES_TO_RADIANS(bearing)) + (boundsWidth / 2.0);
+
             // Recenter the position
             origin.x += (walkingOffset.x * scale);
             origin.y += (walkingOffset.y * scale);
@@ -291,7 +291,7 @@
     }
     
     headingView.transform = CGAffineTransformIdentity;
-    headingView.transform = CGAffineTransformMakeRotation(M_PI * heading / 180.0f);
+    headingView.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(heading));
     
     if(rotatable) {
         self.transform = CGAffineTransformIdentity;

@@ -400,7 +400,7 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 #pragma mark -
 #pragma mark CLLocationManager delegate methods 
  
-- (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation
+- (void) locationManager:(CLLocationManager*)manager didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation
 {
     if(currentLocation)
         [currentLocation release];
@@ -408,7 +408,7 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
     currentLocation = [newLocation retain];
 }
 
-- (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError*)error
+- (void) locationManager:(CLLocationManager*)manager didFailWithError:(NSError*)error
 {
     SGLog(@"SG3DOverlayEnvironment - Unable to retreive location");
 }
@@ -432,17 +432,17 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
         for(SGAnnotationView* annotationView in annotationViews) {
             annotation = annotationView.annotation;
             if(annotation && !annotationView.isCaptured) {                
-                bearing = (double)[currentLocation getBearingFromCoordinate:annotation.coordinate];
+                bearing = [currentLocation getBearingFromCoordinate:annotation.coordinate] - 90.0;
                 distance = [self getAnnotationViewDistance:annotationView];
                 
-                zCoord = -distance * cos(DEGREES_TO_RADIANS(bearing));
-                xCoord = distance * sin(DEGREES_TO_RADIANS(bearing));
+                zCoord = distance * sin(DEGREES_TO_RADIANS(bearing));
+                xCoord = distance * cos(DEGREES_TO_RADIANS(bearing));
                 yCoord = kSGMeter * annotationView.altitude;
                 
                 glPushMatrix();
                 
                 glTranslatef(xCoord, yCoord, zCoord);
-                glRotatef(-bearing, 0.0, 1.0, 0.0);
+                glRotatef(-(bearing + 90.0), 0.0, 1.0, 0.0);
                 
                 // If the texture becomes to close to the camera, we need
                 // to scale it approprietly
@@ -465,7 +465,7 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
                 
                 glPopMatrix();
                 
-                annotationView.bearing = bearing;
+                annotationView.bearing = bearing + 90.0;
                 annotationView.distance = distance;
             
                 // Save later for touch calculations

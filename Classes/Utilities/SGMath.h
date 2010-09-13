@@ -38,7 +38,8 @@ typedef struct Point3Struct {
 } SGPoint3;
 typedef SGPoint3 SGVector3;
 
-#define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) / 180.0 * M_PI)
+#define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) * M_PI / 180.0)
+#define RADIANS_TO_DEGREES(__RADIANS__) ((__RADIANS__) * 180.0 / M_PI)
 
 /* create, initialize, and return a new SGVector */
 extern SGVector3* V3New(double x, double y, double z);
