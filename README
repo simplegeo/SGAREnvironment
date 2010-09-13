@@ -1,4 +1,4 @@
-SGAREnvironment v0.3.6
+SGAREnvironment v0.3.7
 
 ================================================================================
 ABSTRACT:
@@ -8,7 +8,7 @@ A pluggbale AR environment that can be used by any MKAnnotation.
 ================================================================================
 USAGE:
 
-1. Run ./build_ar_environment
+1. Run ./build_dist
 2. Add /path/to/SGAREnvironment-v*.*.*/Headers to the "Header Search Paths" setting.
 3. Add /path/to/SGAREnvironment-v*.*.*/$(PLATFORM_NAME) to "Library Search Paths" setting.
 3. Add the following frameworks: OpenGLES, MapKit, CoreLocation, CoreGraphics, QuartzCore, UIKit
@@ -73,8 +73,8 @@ Headers
 	Defines a subclass of UIView that displays SGAnnotationViews in a radar-ish
 	manner.
 	
-	SGSimpleGeo.h
-	Contains all the header files for the ARView files.
+	SGSAREnvironment.h
+	Contains all the header files for the augmented reality source files.
      
 Images
 The default images used in the SDK. Feel free to override these with your own.
@@ -115,6 +115,10 @@ They aren't very pretty at the moment.
 	
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+Version 0.3.7
+- Fixed an issue where the bearing wasn't being calculated properly for certain
+earth quadrants
+
 Version 0.3.6
 - Added support for iOS4 
 
