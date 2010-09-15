@@ -9,6 +9,48 @@
 /* Begin PBXBuildFile section */
 		4A022F601226200E0063BCED /* SGGlassAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */; };
 		4A022F611226200E0063BCED /* SGGlassAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A022F5F1226200E0063BCED /* SGGlassAnnotationView.h */; };
+		4A0418E4124065B600C93E1B /* SGBearingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0418E3124065B600C93E1B /* SGBearingTest.m */; };
+		4A0418EB1240667800C93E1B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0418EA1240667800C93E1B /* SenTestingKit.framework */; };
+		4A0419051240668600C93E1B /* SGTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4741120964700D4E22D /* SGTexture.m */; };
+		4A0419061240668700C93E1B /* SGRadar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4841120964700D4E22D /* SGRadar.m */; };
+		4A0419071240668800C93E1B /* SGPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A705A72121CD95800B3D330 /* SGPinAnnotationView.m */; };
+		4A0419081240668800C93E1B /* SGMovableStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4821120964700D4E22D /* SGMovableStack.m */; };
+		4A0419091240668A00C93E1B /* SGHeadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4801120964700D4E22D /* SGHeadingView.m */; };
+		4A04190A1240668A00C93E1B /* SGMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4701120964700D4E22D /* SGMath.c */; };
+		4A04190B1240668B00C93E1B /* SGGlassAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */; };
+		4A04190C1240668C00C93E1B /* SGEnvironmentConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4671120964700D4E22D /* SGEnvironmentConstants.m */; };
+		4A04190D1240668D00C93E1B /* SGARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4591120964700D4E22D /* SGARViewController.m */; };
+		4A04190E1240668E00C93E1B /* CLLocationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A476AFA11619D960066F747 /* CLLocationAdditions.m */; };
+		4A04190F1240668E00C93E1B /* SG3DOverlayEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4641120964700D4E22D /* SG3DOverlayEnvironment.m */; };
+		4A0419101240668F00C93E1B /* SG3DOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4771120964700D4E22D /* SG3DOverlayView.m */; };
+		4A0419111240669000C93E1B /* SGAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4791120964700D4E22D /* SGAnnotationView.m */; };
+		4A0419121240669100C93E1B /* SGAnnotationViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A47B1120964700D4E22D /* SGAnnotationViewContainer.m */; };
+		4A0419131240669300C93E1B /* SGARView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A47E1120964700D4E22D /* SGARView.m */; };
+		4A0419181240669C00C93E1B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2DFDCE121C6F680057290D /* AVFoundation.framework */; };
+		4A04191B1240669F00C93E1B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7AD1121E5F7003C1949 /* CoreGraphics.framework */; };
+		4A04191C1240669F00C93E1B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7AF1121E5F7003C1949 /* CoreLocation.framework */; };
+		4A04191D124066A000C93E1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		4A04191E124066A100C93E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A574C051152C88600794035 /* MapKit.framework */; };
+		4A04191F124066A300C93E1B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7B11121E5F7003C1949 /* OpenGLES.framework */; };
+		4A041920124066A400C93E1B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7B31121E5F7003C1949 /* QuartzCore.framework */; };
+		4A041921124066A500C93E1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEDB7B51121E5F7003C1949 /* UIKit.framework */; };
+		4A0419401240684900C93E1B /* SGTopInspectorBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A4961120964700D4E22D /* SGTopInspectorBackground.png */; };
+		4A0419411240684900C93E1B /* SGRedPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A4951120964700D4E22D /* SGRedPin.png */; };
+		4A0419421240684A00C93E1B /* SGMiddleInspectorBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A4941120964700D4E22D /* SGMiddleInspectorBackground.png */; };
+		4A0419441240684B00C93E1B /* SGDefaultRadarTargetImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A4911120964700D4E22D /* SGDefaultRadarTargetImage.png */; };
+		4A0419451240684C00C93E1B /* SGGlassTargetBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A4931120964700D4E22D /* SGGlassTargetBackground.png */; };
+		4A0419461240684D00C93E1B /* SGDefaultSelectedContainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A4921120964700D4E22D /* SGDefaultSelectedContainer.png */; };
+		4A0419471240684D00C93E1B /* SGDefaultRadarCurrentLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A4901120964700D4E22D /* SGDefaultRadarCurrentLocation.png */; };
+		4A0419481240684F00C93E1B /* SGDefaultRadarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A48F1120964700D4E22D /* SGDefaultRadarBackground.png */; };
+		4A0419491240685000C93E1B /* SGDefaultProfilePicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A48E1120964700D4E22D /* SGDefaultProfilePicture.png */; };
+		4A04194A1240685100C93E1B /* SGBluePin.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A48A1120964700D4E22D /* SGBluePin.png */; };
+		4A04194B1240685200C93E1B /* SGBottomInspectorBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A48B1120964700D4E22D /* SGBottomInspectorBackground.png */; };
+		4A04194C1240685300C93E1B /* SGCloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A48C1120964700D4E22D /* SGCloseButton.png */; };
+		4A04194D1240685300C93E1B /* SGDefaultContainer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A48D1120964700D4E22D /* SGDefaultContainer.png */; };
+		4A04194F1240685600C93E1B /* RightButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A4891120964700D4E22D /* RightButton.png */; };
+		4A0419501240685700C93E1B /* LeftButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A64A4881120964700D4E22D /* LeftButton.png */; };
+		4A0419511240685800C93E1B /* GLU+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A722F5E1198BFF80078ABCE /* GLU+iPhone.m */; };
+		4A0419521240685900C93E1B /* AccelerometerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A722FAA1198C3B50078ABCE /* AccelerometerFilter.m */; };
 		4A2DFDCF121C6F680057290D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2DFDCE121C6F680057290D /* AVFoundation.framework */; };
 		4A476AFB11619D960066F747 /* CLLocationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A476AF911619D960066F747 /* CLLocationAdditions.h */; };
 		4A476AFC11619D960066F747 /* CLLocationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A476AFA11619D960066F747 /* CLLocationAdditions.m */; };
@@ -59,6 +101,10 @@
 /* Begin PBXFileReference section */
 		4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGlassAnnotationView.m; sourceTree = "<group>"; };
 		4A022F5F1226200E0063BCED /* SGGlassAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGlassAnnotationView.h; sourceTree = "<group>"; };
+		4A0418C31240642E00C93E1B /* SGAREnvironmentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGAREnvironmentTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A0418C41240642E00C93E1B /* SGAREnvironmentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SGAREnvironmentTests-Info.plist"; sourceTree = "<group>"; };
+		4A0418E3124065B600C93E1B /* SGBearingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBearingTest.m; sourceTree = "<group>"; };
+		4A0418EA1240667800C93E1B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Developer/Library/Frameworks/SenTestingKit.framework; sourceTree = SDKROOT; };
 		4A2DFDCE121C6F680057290D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4A476AF911619D960066F747 /* CLLocationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLLocationAdditions.h; sourceTree = "<group>"; };
 		4A476AFA11619D960066F747 /* CLLocationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLLocationAdditions.m; sourceTree = "<group>"; };
@@ -126,6 +172,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A0418C01240642E00C93E1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A0418EB1240667800C93E1B /* SenTestingKit.framework in Frameworks */,
+				4A0419181240669C00C93E1B /* AVFoundation.framework in Frameworks */,
+				4A04191B1240669F00C93E1B /* CoreGraphics.framework in Frameworks */,
+				4A04191C1240669F00C93E1B /* CoreLocation.framework in Frameworks */,
+				4A04191D124066A000C93E1B /* Foundation.framework in Frameworks */,
+				4A04191E124066A100C93E1B /* MapKit.framework in Frameworks */,
+				4A04191F124066A300C93E1B /* OpenGLES.framework in Frameworks */,
+				4A041920124066A400C93E1B /* QuartzCore.framework in Frameworks */,
+				4A041921124066A500C93E1B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07C0554694100DB518D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libSGAREnvironment.a */,
+				4A0418C31240642E00C93E1B /* SGAREnvironmentTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +218,7 @@
 		0867D691FE84028FC02AAC07 /* SGARView */ = {
 			isa = PBXGroup;
 			children = (
+				4A0418E1124065A200C93E1B /* Tests */,
 				4A7551E711DBD24D003E8D8A /* build_dist */,
 				4A64A4531120964700D4E22D /* Classes */,
 				4A64A4851120964700D4E22D /* README */,
@@ -162,6 +226,7 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				4AF85B3711A5E7F500B97ADA /* LICENSE */,
+				4A0418C41240642E00C93E1B /* SGAREnvironmentTests-Info.plist */,
 			);
 			name = SGARView;
 			sourceTree = "<group>";
@@ -169,6 +234,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A0418EA1240667800C93E1B /* SenTestingKit.framework */,
 				4AEDB7B51121E5F7003C1949 /* UIKit.framework */,
 				4AEDB7B31121E5F7003C1949 /* QuartzCore.framework */,
 				4AEDB7B11121E5F7003C1949 /* OpenGLES.framework */,
@@ -179,6 +245,14 @@
 				4A2DFDCE121C6F680057290D /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A0418E1124065A200C93E1B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4A0418E3124065B600C93E1B /* SGBearingTest.m */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		4A64A4531120964700D4E22D /* Classes */ = {
@@ -340,6 +414,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4A0418C21240642E00C93E1B /* SGAREnvironmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A0418C71240642F00C93E1B /* Build configuration list for PBXNativeTarget "SGAREnvironmentTests" */;
+			buildPhases = (
+				4A0418BE1240642E00C93E1B /* Resources */,
+				4A0418BF1240642E00C93E1B /* Sources */,
+				4A0418C01240642E00C93E1B /* Frameworks */,
+				4A0418C11240642E00C93E1B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SGAREnvironmentTests;
+			productName = SGAREnvironmentTests;
+			productReference = 4A0418C31240642E00C93E1B /* SGAREnvironmentTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		D2AAC07D0554694100DB518D /* SGAREnvironment */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SGAREnvironment" */;
@@ -371,11 +463,78 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* SGAREnvironment */,
+				4A0418C21240642E00C93E1B /* SGAREnvironmentTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		4A0418BE1240642E00C93E1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A0419401240684900C93E1B /* SGTopInspectorBackground.png in Resources */,
+				4A0419411240684900C93E1B /* SGRedPin.png in Resources */,
+				4A0419421240684A00C93E1B /* SGMiddleInspectorBackground.png in Resources */,
+				4A0419441240684B00C93E1B /* SGDefaultRadarTargetImage.png in Resources */,
+				4A0419451240684C00C93E1B /* SGGlassTargetBackground.png in Resources */,
+				4A0419461240684D00C93E1B /* SGDefaultSelectedContainer.png in Resources */,
+				4A0419471240684D00C93E1B /* SGDefaultRadarCurrentLocation.png in Resources */,
+				4A0419481240684F00C93E1B /* SGDefaultRadarBackground.png in Resources */,
+				4A0419491240685000C93E1B /* SGDefaultProfilePicture.png in Resources */,
+				4A04194A1240685100C93E1B /* SGBluePin.png in Resources */,
+				4A04194B1240685200C93E1B /* SGBottomInspectorBackground.png in Resources */,
+				4A04194C1240685300C93E1B /* SGCloseButton.png in Resources */,
+				4A04194D1240685300C93E1B /* SGDefaultContainer.png in Resources */,
+				4A04194F1240685600C93E1B /* RightButton.png in Resources */,
+				4A0419501240685700C93E1B /* LeftButton.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A0418C11240642E00C93E1B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		4A0418BF1240642E00C93E1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A0418E4124065B600C93E1B /* SGBearingTest.m in Sources */,
+				4A0419051240668600C93E1B /* SGTexture.m in Sources */,
+				4A0419061240668700C93E1B /* SGRadar.m in Sources */,
+				4A0419071240668800C93E1B /* SGPinAnnotationView.m in Sources */,
+				4A0419081240668800C93E1B /* SGMovableStack.m in Sources */,
+				4A0419091240668A00C93E1B /* SGHeadingView.m in Sources */,
+				4A04190A1240668A00C93E1B /* SGMath.c in Sources */,
+				4A04190B1240668B00C93E1B /* SGGlassAnnotationView.m in Sources */,
+				4A04190C1240668C00C93E1B /* SGEnvironmentConstants.m in Sources */,
+				4A04190D1240668D00C93E1B /* SGARViewController.m in Sources */,
+				4A04190E1240668E00C93E1B /* CLLocationAdditions.m in Sources */,
+				4A04190F1240668E00C93E1B /* SG3DOverlayEnvironment.m in Sources */,
+				4A0419101240668F00C93E1B /* SG3DOverlayView.m in Sources */,
+				4A0419111240669000C93E1B /* SGAnnotationView.m in Sources */,
+				4A0419121240669100C93E1B /* SGAnnotationViewContainer.m in Sources */,
+				4A0419131240669300C93E1B /* SGARView.m in Sources */,
+				4A0419511240685800C93E1B /* GLU+iPhone.m in Sources */,
+				4A0419521240685900C93E1B /* AccelerometerFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,6 +632,67 @@
 			};
 			name = Release;
 		};
+		4A0418C51240642F00C93E1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = Resources/SGAREnvironment_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "SG_DEBUG=1";
+				INFOPLIST_FILE = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SGAREnvironmentTests;
+				SDKROOT = iphonesimulator4.0;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4A0418C61240642F00C93E1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "SGAREnvironmentTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SGAREnvironmentTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -490,6 +710,15 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A0418C71240642F00C93E1B /* Build configuration list for PBXNativeTarget "SGAREnvironmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A0418C51240642F00C93E1B /* Debug */,
+				4A0418C61240642F00C93E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

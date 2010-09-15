@@ -34,6 +34,8 @@
 
 #import "CLLocationAdditions.h"
 
+#import "SGMath.h"
+
 @implementation CLLocation (SGAREnvironment)
 
 - (BOOL) isEqualToLocation:(CLLocation*)location
@@ -52,15 +54,17 @@
 
 - (double) getBearingFromCoordinate:(CLLocationCoordinate2D)coord
 {
-    float firstLat = DEGREES_TO_RADIANS(self.coordinate.latitude);
-    float firstLon = DEGREES_TO_RADIANS(self.coordinate.longitude);
-    float secondLat = DEGREES_TO_RADIANS(coord.latitude);
-    float secondLon = DEGREES_TO_RADIANS(coord.longitude);
+    double firstLat = DEGREES_TO_RADIANS(self.coordinate.latitude);
+    double firstLon = DEGREES_TO_RADIANS(self.coordinate.longitude);
+    double secondLat = DEGREES_TO_RADIANS(coord.latitude);
+    double secondLon = DEGREES_TO_RADIANS(coord.longitude);
     
     double deltaLong = secondLon - firstLon;
-    double b = atan2(sin(deltaLong)*cos(secondLat),cos(firstLat)*sin(secondLat)-sin(firstLat)*cos(secondLat)*cos(deltaLong)); 
+    double x = cos(firstLat) * sin(secondLat) - sin(firstLat) * cos(secondLat) * cos(deltaLong);
+    double y = sin(deltaLong) * cos(secondLat);
+    double b = atan2(y, x); 
     b = RADIANS_TO_DEGREES(b);
-    return b < 0 ? b + 360.0 : b;
+    return b < 0.0 ? b + 360.0 : b;
 }
 
 - (double) distanceToLocation:(CLLocation*)location
