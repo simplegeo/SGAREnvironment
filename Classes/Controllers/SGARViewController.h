@@ -64,7 +64,7 @@
 * that both bars have a black, translucent tint color. 
 */
 
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+#if __IPHONE_4_0 && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0
 
 @interface SGARViewController : UIViewController <SGARViewDataSource> {
 
@@ -84,7 +84,7 @@
     NSMutableArray* annotations;
  	NSMutableArray* buckets;
  
-#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+#if !__IPHONE_4_0
 
     UINavigationBar* myNavigationBar;
     UINavigationItem* myNavigationItem;
@@ -157,7 +157,7 @@
 */
 - (BOOL) isModal;
 
-#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+#if !__IPHONE_4_0
 
 /*!
 * @method navBar

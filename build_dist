@@ -36,7 +36,7 @@ done
 if [ $1 ]; then
   SDK_VERSION=$1
 else
-  SDK_VERSION=4.0
+  SDK_VERSION=4.1
 fi
 SDKs=( iphoneos$SDK_VERSION iphonesimulator$SDK_VERSION )
 

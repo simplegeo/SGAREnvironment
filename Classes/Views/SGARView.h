@@ -32,7 +32,7 @@
 //  Created by Derek Smith.
 //
 
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
+#if __IPHONE_4_0 && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0 && !TARGET_IPHONE_SIMULATOR
 
 #import <AVFoundation/AVFoundation.h>
 
@@ -108,7 +108,7 @@ typedef NSUInteger SGChromeComponent;
  
     NSMutableArray* containers;
     
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
+#if __IPHONE_4_0 && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0 && !TARGET_IPHONE_SIMULATOR
     
     AVCaptureVideoPreviewLayer* cameraBackgroundLayer;
     AVCaptureSession* captureSession;
@@ -280,7 +280,7 @@ typedef NSUInteger SGChromeComponent;
 - (BOOL) hitTestAtPoint:(CGPoint)point withEvent:(SGControlEvent)event;
 - (void) empty;
 
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED && !TARGET_IPHONE_SIMULATOR
+#if __IPHONE_4_0 && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0 && !TARGET_IPHONE_SIMULATOR
 
 - (void) startCaptureSession;
 - (void) stopCaptureSession;

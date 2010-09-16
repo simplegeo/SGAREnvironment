@@ -73,7 +73,7 @@
     arView.dataSource = self;
     arView.radar.frame = CGRectMake(20.0, 64.0, 100.0, 100.0);
 
-#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+#if !__IPHONE_4_0
 
     myNavigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, 18.0, 320.0, 44.0)];
     myNavigationBar.tintColor = [UIColor blackColor];
@@ -163,7 +163,7 @@
 #pragma mark -
 #pragma mark UIViewController overrides 
 
-#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+#if !__IPHONE_4_0
  
 - (UINavigationBar*) navBar
 {
@@ -216,7 +216,7 @@
     
     self.view.backgroundColor = [UIColor clearColor];
 
-#if __IPHONE_4_0 >= __IPHONE_OS_VERSION_MAX_ALLOWED
+#ifdef __IPHONE_4_0 && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0
 
     [self.view addSubview:arView];
     [self.view sendSubviewToBack:arView];
@@ -259,7 +259,7 @@
     return NO;
 }
 
-#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+#if !__IPHONE_4_0
 
 - (void) pushViewController:(UIViewController*)viewController animated:(BOOL)animated
 {
@@ -314,7 +314,7 @@
     [annotations release];
     [buckets release];
 
-#if __IPHONE_4_0 < __IPHONE_OS_VERSION_MAX_ALLOWED
+#if !__IPHONE_4_0
 
     [myNavigationItem release];
     [myNavigationBar release];
