@@ -1,4 +1,4 @@
-SGAREnvironment v0.3.7
+SGAREnvironment v0.3.8
 
 ================================================================================
 ABSTRACT:
@@ -115,6 +115,11 @@ They aren't very pretty at the moment.
 	
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+Version 0.3.8
+- The prefix file was in charge of importing important frameworks. We need to 
+move those imports into the header files because the prefix might not be the 
+same in other projects.
+
 Version 0.3.7
 - Fixed an issue where the bearing wasn't being calculated properly for certain
 earth quadrants
