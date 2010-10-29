@@ -557,7 +557,13 @@
         [previousContainer release];
     [containers release];
 
-    
+#if __IPHONE_4_0 && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0 && !TARGET_IPHONE_SIMULATOR
+
+    [cameraBackgroundLayer release];
+    [captureSession release];
+
+#endif
+
     [super dealloc];
 }
 
