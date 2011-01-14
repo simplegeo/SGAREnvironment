@@ -89,6 +89,60 @@
 		5D7290F012E0EF2C00DCA295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */; };
 		5D7290F412E0EF3D00DCA295 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7290F312E0EF3D00DCA295 /* CoreLocation.framework */; };
 		5D72915812E0EF8700DCA295 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D72915712E0EF8700DCA295 /* QuartzCore.framework */; };
+		5D72919712E0F19D00DCA295 /* AccelerometerFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A722FA91198C3B50078ABCE /* AccelerometerFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72919812E0F19D00DCA295 /* CLLocationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A476AF911619D960066F747 /* CLLocationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72919912E0F19D00DCA295 /* GLU+iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A722F5D1198BFF80078ABCE /* GLU+iPhone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72919A12E0F19D00DCA295 /* SG3DOverlayEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4631120964700D4E22D /* SG3DOverlayEnvironment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72919B12E0F19D00DCA295 /* SG3DOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4761120964700D4E22D /* SG3DOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72919C12E0F19D00DCA295 /* SGAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4781120964700D4E22D /* SGAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72919D12E0F19D00DCA295 /* SGAnnotationViewContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A47A1120964700D4E22D /* SGAnnotationViewContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72919E12E0F19D00DCA295 /* SGAREnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEDBA831121F32D003C1949 /* SGAREnvironment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72919F12E0F19D00DCA295 /* SGARResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A47C1120964700D4E22D /* SGARResponder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A012E0F19D00DCA295 /* SGARView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A47D1120964700D4E22D /* SGARView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A112E0F19D00DCA295 /* SGARViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4581120964700D4E22D /* SGARViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A212E0F19D00DCA295 /* SGControlEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4651120964700D4E22D /* SGControlEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A312E0F19D00DCA295 /* SGEnvironmentConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4661120964700D4E22D /* SGEnvironmentConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A412E0F19D00DCA295 /* SGGlassAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A022F5F1226200E0063BCED /* SGGlassAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A512E0F19D00DCA295 /* SGHeadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A47F1120964700D4E22D /* SGHeadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A612E0F19D00DCA295 /* SGMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4711120964700D4E22D /* SGMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A712E0F19D00DCA295 /* SGMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4721120964700D4E22D /* SGMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A812E0F19D00DCA295 /* SGMovableStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4811120964700D4E22D /* SGMovableStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291A912E0F19D00DCA295 /* SGRadar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4831120964700D4E22D /* SGRadar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291AA12E0F19D00DCA295 /* SGTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4731120964700D4E22D /* SGTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291AB12E0F1B900DCA295 /* SGAREnvironment_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4A64A4971120964700D4E22D /* SGAREnvironment_Prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D7291AC12E0F20100DCA295 /* SGPinAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A705A71121CD95800B3D330 /* SGPinAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72922212E0F27A00DCA295 /* AccelerometerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A722FAA1198C3B50078ABCE /* AccelerometerFilter.m */; };
+		5D72922312E0F27A00DCA295 /* CLLocationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A476AFA11619D960066F747 /* CLLocationAdditions.m */; };
+		5D72922412E0F27A00DCA295 /* GLU+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A722F5E1198BFF80078ABCE /* GLU+iPhone.m */; };
+		5D72922512E0F27A00DCA295 /* SG3DOverlayEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4641120964700D4E22D /* SG3DOverlayEnvironment.m */; };
+		5D72922612E0F27A00DCA295 /* SG3DOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4771120964700D4E22D /* SG3DOverlayView.m */; };
+		5D72922712E0F27A00DCA295 /* SGAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4791120964700D4E22D /* SGAnnotationView.m */; };
+		5D72922812E0F27A00DCA295 /* SGAnnotationViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A47B1120964700D4E22D /* SGAnnotationViewContainer.m */; };
+		5D72922912E0F27A00DCA295 /* SGARView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A47E1120964700D4E22D /* SGARView.m */; };
+		5D72922A12E0F27A00DCA295 /* SGARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4591120964700D4E22D /* SGARViewController.m */; };
+		5D72922C12E0F27A00DCA295 /* SGEnvironmentConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4671120964700D4E22D /* SGEnvironmentConstants.m */; };
+		5D72922D12E0F27A00DCA295 /* SGGlassAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */; };
+		5D72922E12E0F27A00DCA295 /* SGHeadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4801120964700D4E22D /* SGHeadingView.m */; };
+		5D72922F12E0F27A00DCA295 /* SGMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4701120964700D4E22D /* SGMath.c */; };
+		5D72923012E0F27A00DCA295 /* SGMovableStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4821120964700D4E22D /* SGMovableStack.m */; };
+		5D72923112E0F27A00DCA295 /* SGPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A705A72121CD95800B3D330 /* SGPinAnnotationView.m */; };
+		5D72923212E0F27A00DCA295 /* SGRadar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4841120964700D4E22D /* SGRadar.m */; };
+		5D72923312E0F27A00DCA295 /* SGTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64A4741120964700D4E22D /* SGTexture.m */; };
+		5D79609412E0F7BB00B33631 /* LeftButton.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A4881120964700D4E22D /* LeftButton.png */; };
+		5D79609512E0F7BB00B33631 /* RightButton.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A4891120964700D4E22D /* RightButton.png */; };
+		5D79609612E0F7BB00B33631 /* SGBluePin.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A48A1120964700D4E22D /* SGBluePin.png */; };
+		5D79609712E0F7BB00B33631 /* SGBottomInspectorBackground.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A48B1120964700D4E22D /* SGBottomInspectorBackground.png */; };
+		5D79609812E0F7BB00B33631 /* SGCloseButton.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A48C1120964700D4E22D /* SGCloseButton.png */; };
+		5D79609912E0F7BB00B33631 /* SGDefaultContainer.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A48D1120964700D4E22D /* SGDefaultContainer.png */; };
+		5D79609A12E0F7BB00B33631 /* SGDefaultProfilePicture.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A48E1120964700D4E22D /* SGDefaultProfilePicture.png */; };
+		5D79609B12E0F7BB00B33631 /* SGDefaultRadarBackground.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A48F1120964700D4E22D /* SGDefaultRadarBackground.png */; };
+		5D79609C12E0F7BB00B33631 /* SGDefaultRadarCurrentLocation.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A4901120964700D4E22D /* SGDefaultRadarCurrentLocation.png */; };
+		5D79609D12E0F7BB00B33631 /* SGDefaultRadarTargetImage.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A4911120964700D4E22D /* SGDefaultRadarTargetImage.png */; };
+		5D79609E12E0F7BB00B33631 /* SGDefaultSelectedContainer.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A4921120964700D4E22D /* SGDefaultSelectedContainer.png */; };
+		5D79609F12E0F7BB00B33631 /* SGGlassTargetBackground.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A4931120964700D4E22D /* SGGlassTargetBackground.png */; };
+		5D7960A012E0F7BB00B33631 /* SGMiddleInspectorBackground.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A4941120964700D4E22D /* SGMiddleInspectorBackground.png */; };
+		5D7960A112E0F7BB00B33631 /* SGRedPin.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A4951120964700D4E22D /* SGRedPin.png */; };
+		5D7960A212E0F7BB00B33631 /* SGTopInspectorBackground.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A64A4961120964700D4E22D /* SGTopInspectorBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,10 +150,37 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* SGAREnvironment */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = SGAREnvironment;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5D7960AB12E0F7C900B33631 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Resources;
+			dstSubfolderSpec = 7;
+			files = (
+				5D79609412E0F7BB00B33631 /* LeftButton.png in CopyFiles */,
+				5D79609512E0F7BB00B33631 /* RightButton.png in CopyFiles */,
+				5D79609612E0F7BB00B33631 /* SGBluePin.png in CopyFiles */,
+				5D79609712E0F7BB00B33631 /* SGBottomInspectorBackground.png in CopyFiles */,
+				5D79609812E0F7BB00B33631 /* SGCloseButton.png in CopyFiles */,
+				5D79609912E0F7BB00B33631 /* SGDefaultContainer.png in CopyFiles */,
+				5D79609A12E0F7BB00B33631 /* SGDefaultProfilePicture.png in CopyFiles */,
+				5D79609B12E0F7BB00B33631 /* SGDefaultRadarBackground.png in CopyFiles */,
+				5D79609C12E0F7BB00B33631 /* SGDefaultRadarCurrentLocation.png in CopyFiles */,
+				5D79609D12E0F7BB00B33631 /* SGDefaultRadarTargetImage.png in CopyFiles */,
+				5D79609E12E0F7BB00B33631 /* SGDefaultSelectedContainer.png in CopyFiles */,
+				5D79609F12E0F7BB00B33631 /* SGGlassTargetBackground.png in CopyFiles */,
+				5D7960A012E0F7BB00B33631 /* SGMiddleInspectorBackground.png in CopyFiles */,
+				5D7960A112E0F7BB00B33631 /* SGRedPin.png in CopyFiles */,
+				5D7960A212E0F7BB00B33631 /* SGTopInspectorBackground.png in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGlassAnnotationView.m; sourceTree = "<group>"; };
@@ -173,6 +254,8 @@
 		5D7290F312E0EF3D00DCA295 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5D7290F712E0EF5B00DCA295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5D72915712E0EF8700DCA295 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5D72916612E0F0AF00DCA295 /* SimpleGeoAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleGeoAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D72916712E0F0AF00DCA295 /* SimpleGeoAR-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleGeoAR-Info.plist"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libSGAREnvironment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGAREnvironment.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -209,6 +292,7 @@
 			children = (
 				D2AAC07E0554694100DB518D /* libSGAREnvironment.a */,
 				4A0418C31240642E00C93E1B /* SGAREnvironmentTests.octest */,
+				5D72916612E0F0AF00DCA295 /* SimpleGeoAR.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +309,7 @@
 				034768DFFF38A50411DB9C8B /* Products */,
 				4AF85B3711A5E7F500B97ADA /* LICENSE */,
 				4A0418C41240642E00C93E1B /* SGAREnvironmentTests-Info.plist */,
+				5D72916712E0F0AF00DCA295 /* SimpleGeoAR-Info.plist */,
 				5D7290EB12E0EF1B00DCA295 /* OpenGLES.framework */,
 				5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */,
 				5D7290F312E0EF3D00DCA295 /* CoreLocation.framework */,
@@ -382,6 +467,35 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5D72918412E0F15000DCA295 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D72919712E0F19D00DCA295 /* AccelerometerFilter.h in Headers */,
+				5D72919812E0F19D00DCA295 /* CLLocationAdditions.h in Headers */,
+				5D72919912E0F19D00DCA295 /* GLU+iPhone.h in Headers */,
+				5D72919A12E0F19D00DCA295 /* SG3DOverlayEnvironment.h in Headers */,
+				5D72919B12E0F19D00DCA295 /* SG3DOverlayView.h in Headers */,
+				5D72919C12E0F19D00DCA295 /* SGAnnotationView.h in Headers */,
+				5D72919D12E0F19D00DCA295 /* SGAnnotationViewContainer.h in Headers */,
+				5D72919E12E0F19D00DCA295 /* SGAREnvironment.h in Headers */,
+				5D7291AB12E0F1B900DCA295 /* SGAREnvironment_Prefix.pch in Headers */,
+				5D72919F12E0F19D00DCA295 /* SGARResponder.h in Headers */,
+				5D7291A012E0F19D00DCA295 /* SGARView.h in Headers */,
+				5D7291A112E0F19D00DCA295 /* SGARViewController.h in Headers */,
+				5D7291A212E0F19D00DCA295 /* SGControlEvents.h in Headers */,
+				5D7291A312E0F19D00DCA295 /* SGEnvironmentConstants.h in Headers */,
+				5D7291A412E0F19D00DCA295 /* SGGlassAnnotationView.h in Headers */,
+				5D7291A512E0F19D00DCA295 /* SGHeadingView.h in Headers */,
+				5D7291A612E0F19D00DCA295 /* SGMath.h in Headers */,
+				5D7291A712E0F19D00DCA295 /* SGMetrics.h in Headers */,
+				5D7291A812E0F19D00DCA295 /* SGMovableStack.h in Headers */,
+				5D7291AC12E0F20100DCA295 /* SGPinAnnotationView.h in Headers */,
+				5D7291A912E0F19D00DCA295 /* SGRadar.h in Headers */,
+				5D7291AA12E0F19D00DCA295 /* SGTexture.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07A0554694100DB518D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,6 +547,24 @@
 			productReference = 4A0418C31240642E00C93E1B /* SGAREnvironmentTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		5D72916512E0F0AF00DCA295 /* SimpleGeoAR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D72916A12E0F0B000DCA295 /* Build configuration list for PBXNativeTarget "SimpleGeoAR" */;
+			buildPhases = (
+				5D72916212E0F0AF00DCA295 /* Resources */,
+				5D72918412E0F15000DCA295 /* Headers */,
+				5D72916312E0F0AF00DCA295 /* Sources */,
+				5D7960AB12E0F7C900B33631 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleGeoAR;
+			productName = SimpleGeoAR.framework;
+			productReference = 5D72916612E0F0AF00DCA295 /* SimpleGeoAR.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
 		D2AAC07D0554694100DB518D /* SGAREnvironment */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SGAREnvironment" */;
@@ -471,6 +603,7 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* SGAREnvironment */,
+				5D72916512E0F0AF00DCA295 /* SimpleGeoAR */,
 				4A0418C21240642E00C93E1B /* SGAREnvironmentTests */,
 			);
 		};
@@ -496,6 +629,13 @@
 				4A04194D1240685300C93E1B /* SGDefaultContainer.png in Resources */,
 				4A04194F1240685600C93E1B /* RightButton.png in Resources */,
 				4A0419501240685700C93E1B /* LeftButton.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D72916212E0F0AF00DCA295 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +680,30 @@
 				4A0419131240669300C93E1B /* SGARView.m in Sources */,
 				4A0419511240685800C93E1B /* GLU+iPhone.m in Sources */,
 				4A0419521240685900C93E1B /* AccelerometerFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D72916312E0F0AF00DCA295 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D72922212E0F27A00DCA295 /* AccelerometerFilter.m in Sources */,
+				5D72922312E0F27A00DCA295 /* CLLocationAdditions.m in Sources */,
+				5D72922412E0F27A00DCA295 /* GLU+iPhone.m in Sources */,
+				5D72922512E0F27A00DCA295 /* SG3DOverlayEnvironment.m in Sources */,
+				5D72922612E0F27A00DCA295 /* SG3DOverlayView.m in Sources */,
+				5D72922712E0F27A00DCA295 /* SGAnnotationView.m in Sources */,
+				5D72922812E0F27A00DCA295 /* SGAnnotationViewContainer.m in Sources */,
+				5D72922912E0F27A00DCA295 /* SGARView.m in Sources */,
+				5D72922A12E0F27A00DCA295 /* SGARViewController.m in Sources */,
+				5D72922C12E0F27A00DCA295 /* SGEnvironmentConstants.m in Sources */,
+				5D72922D12E0F27A00DCA295 /* SGGlassAnnotationView.m in Sources */,
+				5D72922E12E0F27A00DCA295 /* SGHeadingView.m in Sources */,
+				5D72922F12E0F27A00DCA295 /* SGMath.c in Sources */,
+				5D72923012E0F27A00DCA295 /* SGMovableStack.m in Sources */,
+				5D72923112E0F27A00DCA295 /* SGPinAnnotationView.m in Sources */,
+				5D72923212E0F27A00DCA295 /* SGRadar.m in Sources */,
+				5D72923312E0F27A00DCA295 /* SGTexture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +873,52 @@
 			};
 			name = Release;
 		};
+		5D72916812E0F0B000DCA295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Resources/SGAREnvironment_Prefix.pch;
+				INFOPLIST_FILE = "SimpleGeoAR-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = SimpleGeoAR;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		5D72916912E0F0B000DCA295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Resources/SGAREnvironment_Prefix.pch;
+				INFOPLIST_FILE = "SimpleGeoAR-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = SimpleGeoAR;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -735,6 +945,15 @@
 			buildConfigurations = (
 				4A0418C51240642F00C93E1B /* Debug */,
 				4A0418C61240642F00C93E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D72916A12E0F0B000DCA295 /* Build configuration list for PBXNativeTarget "SimpleGeoAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D72916812E0F0B000DCA295 /* Debug */,
+				5D72916912E0F0B000DCA295 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
