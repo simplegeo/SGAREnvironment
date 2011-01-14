@@ -85,7 +85,21 @@
 		4ABE1DC71242B1AA002F42EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DC61242B1AA002F42EC /* QuartzCore.framework */; };
 		4ABE1DC91242B1AA002F42EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DC81242B1AA002F42EC /* UIKit.framework */; };
 		4AEDBA841121F32D003C1949 /* SGAREnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEDBA831121F32D003C1949 /* SGAREnvironment.h */; };
+		5D7290EC12E0EF1B00DCA295 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7290EB12E0EF1B00DCA295 /* OpenGLES.framework */; };
+		5D7290F012E0EF2C00DCA295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */; };
+		5D7290F412E0EF3D00DCA295 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7290F312E0EF3D00DCA295 /* CoreLocation.framework */; };
+		5D72915812E0EF8700DCA295 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D72915712E0EF8700DCA295 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D7290E012E0EEC200DCA295 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* SGAREnvironment */;
+			remoteInfo = SGAREnvironment;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGlassAnnotationView.m; sourceTree = "<group>"; };
@@ -154,6 +168,11 @@
 		4ABE1DC81242B1AA002F42EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4AEDBA831121F32D003C1949 /* SGAREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAREnvironment.h; sourceTree = "<group>"; };
 		4AF85B3711A5E7F500B97ADA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5D7290EB12E0EF1B00DCA295 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5D7290F312E0EF3D00DCA295 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5D7290F712E0EF5B00DCA295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5D72915712E0EF8700DCA295 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libSGAREnvironment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGAREnvironment.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -162,6 +181,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7290EC12E0EF1B00DCA295 /* OpenGLES.framework in Frameworks */,
+				5D7290F012E0EF2C00DCA295 /* CoreGraphics.framework in Frameworks */,
+				5D7290F412E0EF3D00DCA295 /* CoreLocation.framework in Frameworks */,
+				5D72915812E0EF8700DCA295 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +225,11 @@
 				034768DFFF38A50411DB9C8B /* Products */,
 				4AF85B3711A5E7F500B97ADA /* LICENSE */,
 				4A0418C41240642E00C93E1B /* SGAREnvironmentTests-Info.plist */,
+				5D7290EB12E0EF1B00DCA295 /* OpenGLES.framework */,
+				5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */,
+				5D7290F312E0EF3D00DCA295 /* CoreLocation.framework */,
+				5D7290F712E0EF5B00DCA295 /* UIKit.framework */,
+				5D72915712E0EF8700DCA295 /* QuartzCore.framework */,
 			);
 			name = SGARView;
 			sourceTree = "<group>";
@@ -398,6 +426,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5D7290E112E0EEC200DCA295 /* PBXTargetDependency */,
 			);
 			name = SGAREnvironmentTests;
 			productName = SGAREnvironmentTests;
@@ -540,6 +569,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5D7290E112E0EEC200DCA295 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* SGAREnvironment */;
+			targetProxy = 5D7290E012E0EEC200DCA295 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -560,7 +597,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = SGAREnvironment;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -594,7 +631,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
