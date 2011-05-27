@@ -1,5 +1,7 @@
 # SGAREnvironment v0.3.8
 
+Note: This codebase is legacy and unsupported. If you have any questions, email andrew@simplegeo.com.
+
 ## ABSTRACT
 
 A pluggable AR (Augmented Reality) environment that can be used by any
